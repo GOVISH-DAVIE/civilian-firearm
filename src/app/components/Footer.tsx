@@ -21,7 +21,7 @@ function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" mt={1}>
       {'Copyright © '}
-      <Link href="https://mui.com/">Sitemark&nbsp;</Link>
+      <Link href="https://www.intelligentso.com">IntelligentSo&nbsp;</Link>
       {new Date().getFullYear()}
     </Typography>
   );
@@ -91,7 +91,7 @@ export default function Footer() {
             </Stack>
           </Box>
         </Box>
-        <Box
+        {/* <Box
           sx={{
             display: { xs: 'none', sm: 'flex' },
             flexDirection: 'column',
@@ -116,8 +116,8 @@ export default function Footer() {
           <Link color="text.secondary" href="#">
             FAQs
           </Link>
-        </Box>
-        <Box
+        </Box> */}
+        {/* <Box
           sx={{
             display: { xs: 'none', sm: 'flex' },
             flexDirection: 'column',
@@ -156,7 +156,7 @@ export default function Footer() {
           <Link color="text.secondary" href="#">
             Contact
           </Link>
-        </Box>
+        </Box> */}
       </Box>
       <Box
         sx={{

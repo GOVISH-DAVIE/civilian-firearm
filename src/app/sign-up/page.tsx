@@ -18,8 +18,8 @@ function Copyright(props: any) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
+      <Link color="inherit" href="https://www.intelligentso.com/">
+       IntelligentSO
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -37,7 +37,7 @@ export default function SignInSide() {
       password: data.get('password'),
     });
   };
-
+                   
   return (
        <Grid container component="main" sx={{ height: '100vh' }}>
      
@@ -76,22 +76,8 @@ export default function SignInSide() {
                 margin="normal"
                 required
                 fullWidth
-                id="email"
-                label="Email Address"
-                name="email"
-                autoComplete="email"
-                autoFocus
-              />
-               <TextField
-                margin="normal"
-                required
-                fullWidth
-                id="email"
-                type='color'
-                label="color Address"
-                name="color"
-                autoComplete="email"
-
+                id="name"
+                label="Full Names " 
                 autoFocus
               />
               <TextField
@@ -100,9 +86,7 @@ export default function SignInSide() {
                 fullWidth
                 id="email"
                 label="Email Address"
-                name="email"
-                autoComplete="email"
-                autoFocus
+                name="email"  
               />
               <TextField
                 margin="normal"
@@ -112,7 +96,17 @@ export default function SignInSide() {
                 label="Password"
                 type="password"
                 id="password"
-                autoComplete="current-password"
+                autoComplete="false"
+              />
+              <TextField
+                margin="normal"
+                required
+                fullWidth
+                name="password"
+                label="Confirm Password"
+                type="password"
+                id="Confirm-password"
+                autoComplete="false"
               />
               <FormControlLabel
                 control={<Checkbox value="remember" color="primary" />}
@@ -128,17 +122,15 @@ export default function SignInSide() {
               </Button>
               <Grid container>
                 <Grid item xs>
-                  <Link href="/forgot-password" variant="body2">
-                    Forgot password?
-                  </Link>
+                   
                 </Grid>
                 <Grid item>
-                  <Link href="/sign-up" variant="body2">
-                    {"Don't have an account? Sign Up"}
+                  <Link href="/sign-in" variant="body2">
+                    {"I already have an account? Sign In"}
                   </Link>
                 </Grid>
               </Grid>
-              <Copyright sx={{ mt: 5 }} />
+              {/* <Copyright sx={{ mt: 5 }} /> */}
             </Box>
           </Box>
         </Grid>

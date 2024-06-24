@@ -91,12 +91,8 @@ export default function LandingPage() {
         <Divider />
         <FAQ />
         <Divider />
-        <Footer />
       </Box>
-      <ToggleCustomTheme
-        showCustomTheme={showCustomTheme}
-        toggleCustomTheme={toggleCustomTheme}
-      />
+       
     </React.Fragment>
   );
 }
