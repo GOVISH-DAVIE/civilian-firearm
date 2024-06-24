@@ -5,13 +5,15 @@ import Button from '@mui/material/Button';
 
 import WbSunnyRoundedIcon from '@mui/icons-material/WbSunnyRounded';
 import ModeNightRoundedIcon from '@mui/icons-material/ModeNightRounded';
+import useThemeMode from '../hooks/themeMode';
 
 interface ToggleColorModeProps {
   mode: PaletteMode;
   toggleColorMode: () => void;
 }
 
-function ToggleColorMode({ mode, toggleColorMode }: ToggleColorModeProps) {
+function ToggleColorMode() {
+  const {mode, toggleColorMode} = useThemeMode()
   return (
     <Box sx={{ maxWidth: '32px' }}>
       <Button

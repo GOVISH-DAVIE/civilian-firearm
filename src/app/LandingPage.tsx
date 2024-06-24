@@ -17,6 +17,8 @@ import Testimonials from './components/Testimonials';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import getLPTheme from './getLPTheme';
+import useThemeMode from './hooks/themeMode';
+import { Cookies } from '@/utils/cookies';
 
 interface ToggleCustomThemeProps {
   showCustomTheme: Boolean;
@@ -62,24 +64,29 @@ function ToggleCustomTheme({
 }
 
 export default function LandingPage() {
-  const [mode, setMode] = React.useState<PaletteMode>('light');
   const [showCustomTheme, setShowCustomTheme] = React.useState(true);
-  const LPtheme = createTheme(getLPTheme(mode));
-  const defaultTheme = createTheme({ palette: { mode } });
 
   const toggleColorMode = () => {
-    setMode((prev) => (prev === 'dark' ? 'light' : 'dark'));
+    setMode((prev) => {  
+        Cookies.add('theme',(prev === 'dark' ? 'light' : 'dark'), 7)
+     return  (prev === 'dark' ? 'light' : 'dark')
+
+     });
+
   };
 
   const toggleCustomTheme = () => {
+
+
     setShowCustomTheme((prev) => !prev);
   };
+  const { mode, setMode } = useThemeMode();
 
   return (
     <React.Fragment>
-      <AppAppBar mode={mode} toggleColorMode={toggleColorMode} />
+      <AppAppBar />
       <Hero />
-      <Box sx={{ bgcolor: 'background.default' }}>
+      {/* <Box sx={{ bgcolor: 'background.default' }}>
         <LogoCollection />
         <Features />
         <Divider />
@@ -91,8 +98,8 @@ export default function LandingPage() {
         <Divider />
         <FAQ />
         <Divider />
-      </Box>
-       
+      </Box> */}
+
     </React.Fragment>
   );
 }

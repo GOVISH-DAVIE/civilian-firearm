@@ -23,7 +23,7 @@ interface AppAppBarProps {
   toggleColorMode: () => void;
 }
 
-function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
+function AppAppBar( ) {
   const [open, setOpen] = React.useState(false);
 
   const toggleDrawer = (newOpen: boolean) => () => {
@@ -144,7 +144,7 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                 alignItems: 'center',
               }}
             >
-              <ToggleColorMode mode={mode} toggleColorMode={toggleColorMode} />
+              <ToggleColorMode   />
               <Button
                 color="primary"
                 variant="text"
@@ -159,8 +159,7 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                 variant="contained"
                 size="small"
                 component="a"
-                href="/material-ui/getting-started/templates/sign-up/"
-                target="_blank"
+                href="/sign-up/" 
               >
                 Sign up
               </Button>
@@ -192,7 +191,7 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                       flexGrow: 1,
                     }}
                   >
-                    <ToggleColorMode mode={mode} toggleColorMode={toggleColorMode} />
+                    <ToggleColorMode  />
                   </Box>
                   <MenuItem onClick={() => scrollToSection('features')}>
                     Features

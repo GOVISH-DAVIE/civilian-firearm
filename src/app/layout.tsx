@@ -1,12 +1,13 @@
 "use client"
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+// import "./globals.css";
 import { Box, CircularProgress, ToggleButton, ToggleButtonGroup } from "@mui/material";
 import AutoAwesomeRoundedIcon from '@mui/icons-material/AutoAwesomeRounded';
 import { ThemeMode } from "./context/theme";
 import Footer from "./components/Footer";
 import { useEffect, useState } from "react";
+import useThemeMode from "./hooks/themeMode";
 const inter = Inter({ subsets: ["latin"] });
 
 
@@ -58,6 +59,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  useThemeMode()
   const [isMounted, setIsMounted] = useState<Boolean>(false);
   useEffect(() => {
      setIsMounted(true)
@@ -73,11 +75,16 @@ export default function RootLayout({
 
     <html lang="en">
       <ThemeMode  >
+
+      <Box sx={{ bgcolor: 'background.default' }}>
         <body className={inter.className}>
 
-          {children}</body>
+          {children}
+          <Footer />
+          </body>
+          </Box>
 
-        <Footer />
+        
 
       </ThemeMode>
     </html >
