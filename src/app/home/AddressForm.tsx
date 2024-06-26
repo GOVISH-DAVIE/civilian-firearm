@@ -18,7 +18,7 @@ const FormGrid = styled(Grid)(() => ({
 }));
 export default function AddressForm() {
   return (
-    <Grid container spacing={2}>
+    <Grid container   spacing={2}>
       <FormGrid item xs={12} md={6}>
         <FormLabel htmlFor="first-name" required>
           First name
@@ -58,17 +58,7 @@ export default function AddressForm() {
           required
         />
       </FormGrid>
-      <FormGrid item xs={12}>
-        <FormLabel htmlFor="address2">Address line 2</FormLabel>
-        <OutlinedInput
-          id="address2"
-          name="address2"
-          type="address2"
-          placeholder="Apartment, suite, unit, etc. (optional)"
-          autoComplete="shipping address-line2"
-          required
-        />
-      </FormGrid>
+      
       <FormGrid item xs={6}>
         <FormLabel htmlFor="city" required>
           City

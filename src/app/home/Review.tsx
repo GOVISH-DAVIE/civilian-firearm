@@ -21,19 +21,10 @@ export default function Review() {
     <Stack spacing={2}>
       <List disablePadding>
         <ListItem sx={{ py: 1, px: 0 }}>
-          <ListItemText primary="Products" secondary="4 selected" />
-          <Typography variant="body2">$134.98</Typography>
+          <ListItemText primary="Document approval" secondary="approved by John Kimani" />
         </ListItem>
-        <ListItem sx={{ py: 1, px: 0 }}>
-          <ListItemText primary="Shipping" secondary="Plus taxes" />
-          <Typography variant="body2">$9.99</Typography>
-        </ListItem>
-        <ListItem sx={{ py: 1, px: 0 }}>
-          <ListItemText primary="Total" />
-          <Typography variant="subtitle1" sx={{ fontWeight: 700 }}>
-            $144.97
-          </Typography>
-        </ListItem>
+         
+         
       </List>
       <Divider />
       <Stack
@@ -44,14 +35,29 @@ export default function Review() {
       >
         <div>
           <Typography variant="subtitle2" gutterBottom>
-            Shipment details
+            Fire arm
           </Typography>
-          <Typography gutterBottom>John Smith</Typography>
+          <Typography gutterBottom>
+            Dealer 1
+          </Typography>
           <Typography color="text.secondary" gutterBottom>
-            {addresses.join(', ')}
+             G4 100 9mm 
+          </Typography>
+        </div>
+
+        <div>
+          <Typography variant="subtitle2" gutterBottom>
+            Fire arm
+          </Typography>
+          <Typography gutterBottom>
+            Dealer 1
+          </Typography>
+          <Typography color="text.secondary" gutterBottom>
+             G4 100 9mm 
           </Typography>
         </div>
         <div>
+          
           <Typography variant="subtitle2" gutterBottom>
             Payment details
           </Typography>

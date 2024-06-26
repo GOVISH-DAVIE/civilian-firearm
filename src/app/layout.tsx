@@ -78,11 +78,14 @@ export default function RootLayout({
  
         <body style={{
           backgroundColor:'background.default',
-          overflow:'scroll'
+          overflow:'scroll', 
+          
+
+
         }} className={inter.className}>
 
           {children}
-          {/* <Footer /> */}
+          <Footer />
           </body> 
 
         

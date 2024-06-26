@@ -30,14 +30,16 @@ import InfoMobile from './InfoMobile';
 import PaymentForm from './PaymentForm';
 import Review from './Review';
 import ToggleColorMode from './ToggleColorMode';
+import Balistics from './balistics';
+import Dealers from './dealers';
 
 interface ToggleCustomThemeProps {
   showCustomTheme: Boolean;
   toggleCustomTheme: () => void;
 }
- 
 
-const steps = ['Document Upload', 'Verification', 'Review & next Schedule'];
+
+const steps = ['Document', 'Verification', 'Get Fire Arm', ' Balistics ', 'Final '];
 
 const logoStyle = {
   width: '140px',
@@ -53,6 +55,10 @@ function getStepContent(step: number) {
     case 1:
       return <PaymentForm />;
     case 2:
+      return <Dealers />;
+    case 3:
+      return <Balistics />;
+    case 4:
       return <Review />;
     default:
       throw new Error('Unknown step');
@@ -77,7 +83,7 @@ export default function Checkout() {
   };
 
   return (
-    <Grid container sx={{ height: { xs: '100%', sm: '100dvh' } }}>
+    <Grid container  >
       <Grid
         item
         xs={12}
@@ -105,7 +111,7 @@ export default function Checkout() {
           <Button
             startIcon={<ArrowBackRoundedIcon />}
             component="a"
-            href="/material-ui/getting-started/templates/landing-page/"
+            href="/"
             sx={{ ml: '-8px' }}
           >
             Back to
@@ -136,18 +142,18 @@ export default function Checkout() {
         md={7}
         lg={8}
         sx={{
-          display: 'flex',
-          flexDirection: 'column',
+          // display: 'flex',
+          // flexDirection: 'column',
+          // justifyContent:'start',
           maxWidth: '100%',
           width: '100%',
-          
-          // background:'red',
+   
           backgroundColor: { xs: 'transparent', sm: 'background.default' },
           alignItems: 'start',
           pt: { xs: 2, sm: 4 },
           px: { xs: 2, sm: 10 },
           gap: { xs: 4, md: 8 },
-          overflowY:'scroll',
+          overflowY: 'scroll',
           // padding:"20px"
 
         }}
@@ -156,10 +162,10 @@ export default function Checkout() {
           sx={{
             display: 'flex',
 
-            justifyContent: { sm: 'space-between', md: 'flex-end' },
+            justifyContent: { sm: 'start', md: 'flex-start' },
             alignItems: 'center',
             width: '100%',
-            maxWidth: { sm: '100%', md: 600 }, 
+            maxWidth: { sm: '100%', md: 600 },
           }}
         >
           <Box
@@ -167,13 +173,13 @@ export default function Checkout() {
               display: { xs: 'flex', md: 'none' },
               flexDirection: 'row',
               width: '100%',
-              justifyContent: 'space-between',
+              justifyContent: 'start',
             }}
           >
             <Button
               startIcon={<ArrowBackRoundedIcon />}
               component="a"
-              href="/material-ui/getting-started/templates/landing-page/"
+              href="/"
               sx={{ alignSelf: 'start' }}
             >
               Back to
@@ -184,10 +190,9 @@ export default function Checkout() {
             sx={{
               display: { xs: 'none', md: 'flex' },
               flexDirection: 'column',
-              justifyContent: 'space-between',
+              justifyContent: 'start',
               alignItems: 'flex-end',
               flexGrow: 1,
-              height: 150,
             }}
           >
             <Stepper
@@ -230,7 +235,7 @@ export default function Checkout() {
             <div>
               <Typography variant="subtitle2" gutterBottom>
                 Civilian  Fire Arm Portal, <br />
-               {" \t"} Welcome
+                {" \t"} Welcome
               </Typography>
               <Typography variant="h4">
                 Martin K.
@@ -244,11 +249,11 @@ export default function Checkout() {
             display: 'flex',
             flexDirection: 'column',
             flexGrow: 1,
-            width: '100%', 
-            maxWidth: { sm: '100%', md: 600 },
-            maxHeight: '100vh',
+            width: '100%',
+            mt:1,
+            maxWidth: { sm: '100%', md: 600 }, 
             gap: { xs: 5, md: 'none' },
-            overflowY:'scroll'
+            overflowY: 'scroll'
           }}
         >
           <Stepper
@@ -257,7 +262,7 @@ export default function Checkout() {
             alternativeLabel
             sx={{ display: { sm: 'flex', md: 'none' } }}
           >
-            
+
             {steps.map((label) => (
               <Step
                 sx={{
@@ -270,7 +275,7 @@ export default function Checkout() {
                 <StepLabel
                   sx={{ '.MuiStepLabel-labelContainer': { maxWidth: '70px' } }}
                 >
-                  {label} 
+                  {label}
                 </StepLabel>
               </Step>
             ))}
@@ -278,13 +283,13 @@ export default function Checkout() {
           {activeStep === steps.length ? (
             <Stack spacing={2} useFlexGap>
               <Typography variant="h1">📦</Typography>
-              <Typography variant="h5">Thank you for your order!</Typography>
-              <Typography variant="body1" color="text.secondary">
+              <Typography variant="h5">Thank you for your Compliance!</Typography>
+              {/* <Typography variant="body1" color="text.secondary">
                 Your order number is
                 <strong>&nbsp;#140396</strong>. We have emailed your order
                 confirmation and will update you once its shipped.
-              </Typography>
-              <Button
+              </Typography> */}
+              {/* <Button
                 variant="contained"
                 sx={{
                   alignSelf: 'start',
@@ -292,10 +297,10 @@ export default function Checkout() {
                 }}
               >
                 Go to my orders
-              </Button>
+              </Button> */}
             </Stack>
           ) : (
-            <React.Fragment>
+            <Box>
               {getStepContent(activeStep)}
               <Box
                 sx={{
@@ -307,7 +312,7 @@ export default function Checkout() {
                   gap: 1,
                   pb: { xs: 12, sm: 0 },
                   mt: { xs: 2, sm: 0 },
-                  mb: '60px', 
+                  mb: '60px',
                 }}
               >
                 {activeStep !== 0 && (
@@ -343,13 +348,14 @@ export default function Checkout() {
                     width: { xs: '100%', sm: 'fit-content' },
                   }}
                 >
-                  {activeStep === steps.length - 1 ? 'Place order' : 'Next'}
+                  {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
                 </Button>
               </Box>
-            </React.Fragment>
+            </Box>
           )}
         </Box>
       </Grid>
+
     </Grid>
   );
 }

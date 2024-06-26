@@ -11,6 +11,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Drawer from '@mui/material/Drawer';
 import MenuIcon from '@mui/icons-material/Menu';
 import ToggleColorMode from './ToggleColorMode';
+import Link from 'next/link';
 
 const logoStyle = {
   width: '140px',
@@ -23,7 +24,7 @@ interface AppAppBarProps {
   toggleColorMode: () => void;
 }
 
-function AppAppBar( ) {
+function AppAppBar() {
   const [open, setOpen] = React.useState(false);
 
   const toggleDrawer = (newOpen: boolean) => () => {
@@ -95,14 +96,18 @@ function AppAppBar( ) {
                 alt="logo of sitemark"
               />
               <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-                <MenuItem
-                  onClick={() => scrollToSection('features')}
-                  sx={{ py: '6px', px: '12px' }}
-                >
-                  <Typography variant="body2" color="text.primary">
-                    Features
-                  </Typography>
-                </MenuItem>
+                <Link style={{
+                  textDecoration: "none"
+                }} href={'/home'}>
+                  <MenuItem
+                    href='/home'
+                    sx={{ py: '6px', px: '12px' }}
+                  >
+                    <Typography variant="body2" color="text.primary">
+                      Civilian Home
+                    </Typography>
+                  </MenuItem>
+                </Link>
                 <MenuItem
                   onClick={() => scrollToSection('testimonials')}
                   sx={{ py: '6px', px: '12px' }}
@@ -144,13 +149,13 @@ function AppAppBar( ) {
                 alignItems: 'center',
               }}
             >
-              <ToggleColorMode   />
+              <ToggleColorMode />
               <Button
                 color="primary"
                 variant="text"
                 size="small"
                 component="a"
-                href="/sign-in" 
+                href="/sign-in"
               >
                 Sign in
               </Button>
@@ -159,7 +164,7 @@ function AppAppBar( ) {
                 variant="contained"
                 size="small"
                 component="a"
-                href="/sign-up/" 
+                href="/sign-up/"
               >
                 Sign up
               </Button>
@@ -191,11 +196,14 @@ function AppAppBar( ) {
                       flexGrow: 1,
                     }}
                   >
-                    <ToggleColorMode  />
+                    <ToggleColorMode />
                   </Box>
-                  <MenuItem onClick={() => scrollToSection('features')}>
-                    Features
-                  </MenuItem>
+                  <Link style={{
+                    textDecoration: 'none'
+                  }} href='/home'>
+                    <MenuItem href='/home'>
+                      Civilian Home
+                    </MenuItem></Link>
                   <MenuItem onClick={() => scrollToSection('testimonials')}>
                     Testimonials
                   </MenuItem>
