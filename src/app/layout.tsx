@@ -75,14 +75,15 @@ export default function RootLayout({
 
     <html lang="en">
       <ThemeMode  >
-
-      <Box sx={{ bgcolor: 'background.default' }}>
-        <body className={inter.className}>
+ 
+        <body style={{
+          backgroundColor:'background.default',
+          overflow:'scroll'
+        }} className={inter.className}>
 
           {children}
-          <Footer />
-          </body>
-          </Box>
+          {/* <Footer /> */}
+          </body> 
 
         
 

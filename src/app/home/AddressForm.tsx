@@ -12,10 +12,14 @@ import { styled } from '@mui/system';
 //   flexDirection: 'column',
 // }));
 
+const FormGrid = styled(Grid)(() => ({
+  display: 'flex',
+  flexDirection: 'column',
+}));
 export default function AddressForm() {
   return (
-    <Grid container spacing={3}>
-      <Grid item xs={12} md={6}>
+    <Grid container spacing={2}>
+      <FormGrid item xs={12} md={6}>
         <FormLabel htmlFor="first-name" required>
           First name
         </FormLabel>
@@ -27,8 +31,8 @@ export default function AddressForm() {
           autoComplete="first name"
           required
         />
-      </Grid>
-      <Grid item xs={12} md={6}>
+      </FormGrid>
+      <FormGrid item xs={12} md={6}>
         <FormLabel htmlFor="last-name" required>
           Last name
         </FormLabel>
@@ -36,12 +40,12 @@ export default function AddressForm() {
           id="last-name"
           name="last-name"
           type="last-name"
-          placeholder="Snow"
+          placeholder="Kimani"
           autoComplete="last name"
           required
         />
-      </Grid>
-      <Grid item xs={12}>
+      </FormGrid>
+      <FormGrid item xs={12}>
         <FormLabel htmlFor="address1" required>
           Address line 1
         </FormLabel>
@@ -53,8 +57,8 @@ export default function AddressForm() {
           autoComplete="shipping address-line1"
           required
         />
-      </Grid>
-      <Grid item xs={12}>
+      </FormGrid>
+      <FormGrid item xs={12}>
         <FormLabel htmlFor="address2">Address line 2</FormLabel>
         <OutlinedInput
           id="address2"
@@ -64,8 +68,8 @@ export default function AddressForm() {
           autoComplete="shipping address-line2"
           required
         />
-      </Grid>
-      <Grid item xs={6}>
+      </FormGrid>
+      <FormGrid item xs={6}>
         <FormLabel htmlFor="city" required>
           City
         </FormLabel>
@@ -73,25 +77,24 @@ export default function AddressForm() {
           id="city"
           name="city"
           type="city"
-          placeholder="New York"
+          placeholder="Nairobi"
           autoComplete="City"
           required
         />
-      </Grid>
-      <Grid item xs={6}>
+      </FormGrid>
+      <FormGrid item xs={6}>
         <FormLabel htmlFor="state" required>
-          State
+          County
         </FormLabel>
         <OutlinedInput
           id="state"
-          name="state"
-          type="state"
-          placeholder="NY"
-          autoComplete="State"
+          name="county"
+          type="text"
+          placeholder="Nairobi" 
           required
         />
-      </Grid>
-      <Grid item xs={6}>
+      </FormGrid>
+      <FormGrid item xs={6}>
         <FormLabel htmlFor="zip" required>
           Zip / Postal code
         </FormLabel>
@@ -103,26 +106,38 @@ export default function AddressForm() {
           autoComplete="shipping postal-code"
           required
         />
-      </Grid>
-      <Grid item xs={6}>
+      </FormGrid>
+      <FormGrid item xs={6}>
+        <FormLabel htmlFor="zip" required>
+         ID Number
+        </FormLabel>
+        <OutlinedInput
+          id="zip"
+          name="idNo"
+          type="text"
+          placeholder="12345" 
+          required
+        />
+      </FormGrid>
+      <FormGrid item xs={12}>
         <FormLabel htmlFor="country" required>
-          Country
+          Documents
         </FormLabel>
         <OutlinedInput
           id="country"
           name="country"
-          type="country"
+          type="file"
           placeholder="United States"
           autoComplete="shipping country"
           required
         />
-      </Grid>
-      <Grid item xs={12}>
+      </FormGrid>
+      <FormGrid item xs={12}>
         <FormControlLabel
           control={<Checkbox name="saveAddress" value="yes" />}
-          label="Use this address for payment details"
+          label="I have verified the above information is correct"
         />
-      </Grid>
+      </FormGrid>
     </Grid>
   );
 }

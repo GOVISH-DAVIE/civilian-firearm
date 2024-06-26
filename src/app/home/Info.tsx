@@ -4,6 +4,7 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import Typography from '@mui/material/Typography';
+import { Chip } from '@mui/material';
 
 const products = [
   {
@@ -53,7 +54,8 @@ export default function Info({ totalPrice }: InfoProps) {
           <ListItem  selected={product.state} key={product.name} sx={{ py: 1, px: 1 }}>
             <ListItemText
               sx={{ mr: 2 }}
-              primary={product.name}
+              primary={<>{product.name} {product.state?<Chip color='error' size='small' label="ongoing" />:''}
+              </>}
               secondary={product.desc}
             />
             {/* <Typography variant="body1" fontWeight="medium">

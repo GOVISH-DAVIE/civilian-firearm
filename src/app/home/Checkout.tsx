@@ -35,46 +35,9 @@ interface ToggleCustomThemeProps {
   showCustomTheme: Boolean;
   toggleCustomTheme: () => void;
 }
+ 
 
-function ToggleCustomTheme({
-  showCustomTheme,
-  toggleCustomTheme,
-}: ToggleCustomThemeProps) {
-  return (
-    <Box
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        width: '100dvw',
-        position: 'fixed',
-        bottom: 24,
-      }}
-    >
-      <ToggleButtonGroup
-        color="primary"
-        exclusive
-        value={showCustomTheme}
-        onChange={toggleCustomTheme}
-        aria-label="Platform"
-        sx={{
-          backgroundColor: 'background.default',
-          '& .Mui-selected': {
-            pointerEvents: 'none',
-          },
-        }}
-      >
-        <ToggleButton value>
-          <AutoAwesomeRoundedIcon sx={{ fontSize: '20px', mr: 1 }} />
-          Custom theme
-        </ToggleButton>
-        <ToggleButton value={false}>Material Design 2</ToggleButton>
-      </ToggleButtonGroup>
-    </Box>
-  );
-}
-
-const steps = ['Shipping address', 'Payment details', 'Review your order'];
+const steps = ['Document Upload', 'Verification', 'Review & next Schedule'];
 
 const logoStyle = {
   width: '140px',
@@ -177,20 +140,26 @@ export default function Checkout() {
           flexDirection: 'column',
           maxWidth: '100%',
           width: '100%',
+          
+          // background:'red',
           backgroundColor: { xs: 'transparent', sm: 'background.default' },
           alignItems: 'start',
           pt: { xs: 2, sm: 4 },
           px: { xs: 2, sm: 10 },
           gap: { xs: 4, md: 8 },
+          overflowY:'scroll',
+          // padding:"20px"
+
         }}
       >
         <Box
           sx={{
             display: 'flex',
+
             justifyContent: { sm: 'space-between', md: 'flex-end' },
             alignItems: 'center',
             width: '100%',
-            maxWidth: { sm: '100%', md: 600 },
+            maxWidth: { sm: '100%', md: 600 }, 
           }}
         >
           <Box
@@ -275,10 +244,11 @@ export default function Checkout() {
             display: 'flex',
             flexDirection: 'column',
             flexGrow: 1,
-            width: '100%',
+            width: '100%', 
             maxWidth: { sm: '100%', md: 600 },
-            maxHeight: '720px',
+            maxHeight: '100vh',
             gap: { xs: 5, md: 'none' },
+            overflowY:'scroll'
           }}
         >
           <Stepper
@@ -287,6 +257,7 @@ export default function Checkout() {
             alternativeLabel
             sx={{ display: { sm: 'flex', md: 'none' } }}
           >
+            
             {steps.map((label) => (
               <Step
                 sx={{
@@ -299,7 +270,7 @@ export default function Checkout() {
                 <StepLabel
                   sx={{ '.MuiStepLabel-labelContainer': { maxWidth: '70px' } }}
                 >
-                  {label}
+                  {label} 
                 </StepLabel>
               </Step>
             ))}
@@ -336,7 +307,7 @@ export default function Checkout() {
                   gap: 1,
                   pb: { xs: 12, sm: 0 },
                   mt: { xs: 2, sm: 0 },
-                  mb: '60px',
+                  mb: '60px', 
                 }}
               >
                 {activeStep !== 0 && (
