@@ -12,11 +12,13 @@ import Drawer from '@mui/material/Drawer';
 import MenuIcon from '@mui/icons-material/Menu';
 import ToggleColorMode from './ToggleColorMode';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const logoStyle = {
-  width: '140px',
-  height: 'auto',
+  width: 'auto',
+  height: '40px',
   cursor: 'pointer',
+  marginleft:"100px"
 };
 
 interface AppAppBarProps {
@@ -88,12 +90,18 @@ function AppAppBar() {
                 px: 0,
               }}
             >
-              <img
+              <Image
                 src={
-                  'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12e6faf73568658154dae_SitemarkDefault.svg'
+                  '/logo.jpeg'
                 }
-                style={logoStyle}
-                alt="logo of sitemark"
+                style={{
+                  width: 'auto',
+                  height: '40px',
+                  cursor: 'pointer',
+                  marginLeft:"100px",
+                  marginRight:"100px"
+                }}
+                alt="logo of Civilian"
               />
               <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                 <Link style={{
@@ -108,38 +116,10 @@ function AppAppBar() {
                     </Typography>
                   </MenuItem>
                 </Link>
-                <MenuItem
-                  onClick={() => scrollToSection('testimonials')}
-                  sx={{ py: '6px', px: '12px' }}
-                >
-                  <Typography variant="body2" color="text.primary">
-                    Testimonials
-                  </Typography>
-                </MenuItem>
-                <MenuItem
-                  onClick={() => scrollToSection('highlights')}
-                  sx={{ py: '6px', px: '12px' }}
-                >
-                  <Typography variant="body2" color="text.primary">
-                    Highlights
-                  </Typography>
-                </MenuItem>
-                <MenuItem
-                  onClick={() => scrollToSection('pricing')}
-                  sx={{ py: '6px', px: '12px' }}
-                >
-                  <Typography variant="body2" color="text.primary">
-                    Pricing
-                  </Typography>
-                </MenuItem>
-                <MenuItem
-                  onClick={() => scrollToSection('faq')}
-                  sx={{ py: '6px', px: '12px' }}
-                >
-                  <Typography variant="body2" color="text.primary">
-                    FAQ
-                  </Typography>
-                </MenuItem>
+                
+                
+               
+               
               </Box>
             </Box>
             <Box
@@ -204,23 +184,14 @@ function AppAppBar() {
                     <MenuItem href='/home'>
                       Civilian Home
                     </MenuItem></Link>
-                  <MenuItem onClick={() => scrollToSection('testimonials')}>
-                    Testimonials
-                  </MenuItem>
-                  <MenuItem onClick={() => scrollToSection('highlights')}>
-                    Highlights
-                  </MenuItem>
-                  <MenuItem onClick={() => scrollToSection('pricing')}>
-                    Pricing
-                  </MenuItem>
-                  <MenuItem onClick={() => scrollToSection('faq')}>FAQ</MenuItem>
-                  <Divider />
+                 
+                   <Divider />
                   <MenuItem>
                     <Button
                       color="primary"
                       variant="contained"
                       component="a"
-                      href="/material-ui/getting-started/templates/sign-up/"
+                      href="/sign-up/"
                       target="_blank"
                       sx={{ width: '100%' }}
                     >
@@ -232,7 +203,7 @@ function AppAppBar() {
                       color="primary"
                       variant="outlined"
                       component="a"
-                      href="/material-ui/getting-started/templates/sign-in/"
+                      href="/sign-in/"
                       target="_blank"
                       sx={{ width: '100%' }}
                     >

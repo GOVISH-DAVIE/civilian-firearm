@@ -7,13 +7,14 @@ import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
+import { IconButton } from '@mui/material';
+import { CloudDownload, Download } from '@mui/icons-material';
 
 const addresses = ['1 MUI Drive', 'Reactville', 'Anytown', '99999', 'USA'];
 const payments = [
-  { name: 'Card type:', detail: 'Visa' },
-  { name: 'Card holder:', detail: 'Mr. John Smith' },
-  { name: 'Card number:', detail: 'xxxx-xxxx-xxxx-1234' },
-  { name: 'Expiry date:', detail: '04/2024' },
+  { name: 'License :', detail: '#12356jhs' },
+  { name: 'Approved By:', detail: 'Mr. John Smith' },
+  { name: 'Expires on:', detail: '04/2024' },
 ];
 
 export default function Review() {
@@ -23,8 +24,8 @@ export default function Review() {
         <ListItem sx={{ py: 1, px: 0 }}>
           <ListItemText primary="Document approval" secondary="approved by John Kimani" />
         </ListItem>
-         
-         
+
+
       </List>
       <Divider />
       <Stack
@@ -41,25 +42,35 @@ export default function Review() {
             Dealer 1
           </Typography>
           <Typography color="text.secondary" gutterBottom>
-             G4 100 9mm 
+            G4 100 9mm
+          </Typography>
+          <Typography color="text.secondary" gutterBottom>
+           Serial Number <b>12354-fvj</b>
           </Typography>
         </div>
 
         <div>
           <Typography variant="subtitle2" gutterBottom>
-            Fire arm
+            Balistics
           </Typography>
           <Typography gutterBottom>
-            Dealer 1
+            Officer John Mutei
           </Typography>
           <Typography color="text.secondary" gutterBottom>
-             G4 100 9mm 
+           Download balistic report <IconButton>
+            <CloudDownload color='primary' />
+           </IconButton>
           </Typography>
         </div>
         <div>
-          
+
           <Typography variant="subtitle2" gutterBottom>
-            Payment details
+            Licence Download
+          </Typography>
+          <Typography color="text.secondary" gutterBottom>
+           Download License  <IconButton>
+            <CloudDownload color='primary' />
+           </IconButton>
           </Typography>
           <Grid container>
             {payments.map((payment) => (
