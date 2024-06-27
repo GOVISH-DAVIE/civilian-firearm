@@ -18,68 +18,13 @@ import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import getLPTheme from './getLPTheme';
 import useThemeMode from './hooks/themeMode';
-import { Cookies } from '@/utils/cookies';
+import { Cookies } from '@/app/utils/cookies';
 
-interface ToggleCustomThemeProps {
-  showCustomTheme: Boolean;
-  toggleCustomTheme: () => void;
-}
-
-function ToggleCustomTheme({
-  showCustomTheme,
-  toggleCustomTheme,
-}: ToggleCustomThemeProps) {
-  return (
-    <Box
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        width: '100dvw',
-        position: 'fixed',
-        bottom: 24,
-      }}
-    >
-      <ToggleButtonGroup
-        color="primary"
-        exclusive
-        value={showCustomTheme}
-        onChange={toggleCustomTheme}
-        aria-label="Platform"
-        sx={{
-          backgroundColor: 'background.default',
-          '& .Mui-selected': {
-            pointerEvents: 'none',
-          },
-        }}
-      >
-        <ToggleButton value>
-          <AutoAwesomeRoundedIcon sx={{ fontSize: '20px', mr: 1 }} />
-          Custom theme
-        </ToggleButton>
-        <ToggleButton value={false}>Material Design 2</ToggleButton>
-      </ToggleButtonGroup>
-    </Box>
-  );
-}
+ 
 
 export default function LandingPage() {
   const [showCustomTheme, setShowCustomTheme] = React.useState(true);
-
-  const toggleColorMode = () => {
-    setMode((prev) => {  
-        Cookies.add('theme',(prev === 'dark' ? 'light' : 'dark'), 7)
-     return  (prev === 'dark' ? 'light' : 'dark')
-
-     });
-
-  };
-
-  const toggleCustomTheme = () => {
-
-
-    setShowCustomTheme((prev) => !prev);
-  };
+ 
   const { mode, setMode } = useThemeMode();
 
   return (

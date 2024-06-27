@@ -18,7 +18,7 @@ const logoStyle = {
   width: 'auto',
   height: '40px',
   cursor: 'pointer',
-  marginleft:"100px"
+  marginleft: "100px"
 };
 
 interface AppAppBarProps {
@@ -94,12 +94,14 @@ function AppAppBar() {
                 src={
                   '/logo.jpeg'
                 }
+                width={100}
+                height={40}
                 style={{
-                  width: 'auto',
+                  width: '100px',
                   height: '40px',
                   cursor: 'pointer',
-                  marginLeft:"100px",
-                  marginRight:"100px"
+                  marginLeft: "20px",
+                  marginRight: "100px"
                 }}
                 alt="logo of Civilian"
               />
@@ -115,11 +117,22 @@ function AppAppBar() {
                       Civilian Home
                     </Typography>
                   </MenuItem>
+
                 </Link>
-                
-                
-               
-               
+
+                <Link style={{
+                  textDecoration: "none"
+                }} href={'/bereau'}>
+                  <MenuItem
+                    href='/bureau'
+                    sx={{ py: '6px', px: '12px' }}
+                  >
+                    <Typography variant="body2" color="text.primary">
+                      Bureau Home
+                    </Typography>
+                  </MenuItem>
+                </Link>
+
               </Box>
             </Box>
             <Box
@@ -183,9 +196,16 @@ function AppAppBar() {
                   }} href='/home'>
                     <MenuItem href='/home'>
                       Civilian Home
-                    </MenuItem></Link>
-                 
-                   <Divider />
+                    </MenuItem> </Link>
+                  <Link style={{
+                    textDecoration: 'none'
+                  }} href='/beareau'>
+                    <MenuItem href='/home'>
+                      Beareau Home
+                    </MenuItem> </Link>
+
+
+                  <Divider />
                   <MenuItem>
                     <Button
                       color="primary"

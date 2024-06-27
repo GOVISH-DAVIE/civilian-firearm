@@ -2,7 +2,7 @@
 import { createTheme, CssBaseline, PaletteMode, ThemeProvider } from "@mui/material";
 import React, { createContext, ReactNode, useEffect, useState } from "react";
 import getLPTheme from "../getLPTheme";
-import { Cookies } from "@/utils/cookies";
+import { Cookies } from "@/app/utils/cookies";
 
 // const themeMode = createContext()
 export interface ThemeModeContextProps {
@@ -17,16 +17,18 @@ export const ThemeModeContext = createContext<ThemeModeContextProps>({
 export const ThemeMode = ({ children }: { children: ReactNode }) => {
     const [mode, setMode] = useState<PaletteMode>('light');
     const LPtheme = createTheme(getLPTheme(mode));
-    
+    const [mounted, setmounted] = useState(false)
     useEffect(() => {
-        if (Cookies.get('theme') != null && Cookies.get('theme').length !=  0) {
-  
+        if (Cookies.get('theme') != null && Cookies.get('theme').length != 0) {
+
             setMode(
-              Cookies.get('theme')  as PaletteMode
-           )
-  
-       }
-      }, [])
+                Cookies.get('theme') as PaletteMode
+            )
+
+        }
+        setmounted(true)
+    }, [])
+    if (!mounted) return null
 
     return <ThemeModeContext.Provider value={{
         mode, setMode

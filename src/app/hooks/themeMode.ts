@@ -2,7 +2,7 @@ import { useContext, useEffect } from "react"
 import { ThemeMode, ThemeModeContext } from "../context/theme"
 import { PaletteMode } from "@mui/material"
 import { Cookie } from "next/font/google"
-import { Cookies } from "@/utils/cookies"
+import { Cookies } from "@/app/utils/cookies"
 
 const useThemeMode = () => {
     const context = useContext(ThemeModeContext)

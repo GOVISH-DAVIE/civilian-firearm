@@ -11,6 +11,7 @@ import Typography from '@mui/material/Typography';
 import FacebookIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/X';
+import Image from 'next/image';
 
 const logoStyle = {
   width: '140px',
@@ -57,12 +58,20 @@ export default function Footer() {
         >
           <Box sx={{ width: { xs: '100%', sm: '60%' } }}>
             <Box sx={{ ml: '-15px' }}>
-              <img
+            <Image
                 src={
-                  'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12e6faf73568658154dae_SitemarkDefault.svg'
+                  '/logo.jpeg'
                 }
-                style={logoStyle}
-                alt="logo of sitemark"
+                width={100}
+                height={40}
+                style={{
+                  width: '100px',
+                  height: '40px',
+                  cursor: 'pointer',
+                  marginLeft:"20px",
+                  marginRight:"100px"
+                }}
+                alt="logo of Civilian"
               />
             </Box>
             <Typography variant="body2" fontWeight={600} gutterBottom>

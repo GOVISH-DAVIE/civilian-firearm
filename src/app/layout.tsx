@@ -6,54 +6,12 @@ import { Box, CircularProgress, ToggleButton, ToggleButtonGroup } from "@mui/mat
 import AutoAwesomeRoundedIcon from '@mui/icons-material/AutoAwesomeRounded';
 import { ThemeMode } from "./context/theme";
 import Footer from "./components/Footer";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import useThemeMode from "./hooks/themeMode";
 const inter = Inter({ subsets: ["latin"] });
 
 
-
-interface ToggleCustomThemeProps {
-  showCustomTheme: Boolean;
-  toggleCustomTheme: () => void;
-}
-
-function ToggleCustomTheme({
-  showCustomTheme,
-  toggleCustomTheme,
-}: ToggleCustomThemeProps) {
-  return (
-    <Box
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        width: '100dvw',
-        position: 'fixed',
-        bottom: 24,
-      }}
-    >
-      <ToggleButtonGroup
-        color="primary"
-        exclusive
-        value={showCustomTheme}
-        onChange={toggleCustomTheme}
-        aria-label="Platform"
-        sx={{
-          backgroundColor: 'background.default',
-          '& .Mui-selected': {
-            pointerEvents: 'none',
-          },
-        }}
-      >
-        <ToggleButton value>
-          <AutoAwesomeRoundedIcon sx={{ fontSize: '20px', mr: 1 }} />
-          Custom theme
-        </ToggleButton>
-        <ToggleButton value={false}>Material Design 2</ToggleButton>
-      </ToggleButtonGroup>
-    </Box>
-  );
-}
+ 
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -62,35 +20,49 @@ export default function RootLayout({
   useThemeMode()
   const [isMounted, setIsMounted] = useState<Boolean>(false);
   useEffect(() => {
-     setIsMounted(true)
+    document.body.style.overflow = "auto";
+    setIsMounted(true)
   }, [])
+  const onRefChange = useCallback((node:any) => {
+    if (node === null) { 
+      // DOM node referenced by ref has been unmounted
+    } else {
+      node.style.overflow = 'auto'
+      //  node.style.overflow = 'auto' 
+    }
+  }, []);
+
 
 
   if (!isMounted) {
-    return <CircularProgress></CircularProgress>
-    
+    return null
+
   }
+
+  
 
   return (
 
-    <html lang="en">
-      <ThemeMode  >
- 
-        <body style={{
-          backgroundColor:'background.default',
-          overflow:'scroll', 
-          
+    < html>
+
+      <body ref={onRefChange} style={{
+        backgroundColor: 'background.default',
+        overflow: 'scroll !important',
 
 
-        }} className={inter.className}>
+
+      }} className={inter.className}>
+        <ThemeMode  >
+
 
           {children}
           <Footer />
-          </body> 
 
-        
 
-      </ThemeMode>
+
+
+        </ThemeMode>
+      </body>
     </html >
   );
 }
