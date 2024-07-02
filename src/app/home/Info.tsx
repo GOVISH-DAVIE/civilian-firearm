@@ -7,17 +7,18 @@ import Typography from '@mui/material/Typography';
 import { Chip } from '@mui/material';
 
 const products = [
-  {
-    name: 'Documentation ',
-    desc: 'Upload Supporting Documents and wait for approval',
-    state: true,
-    ongoing: true,
-  },
+ 
   {
     name: 'Arms and Balistics',
     desc: 'Get Reffered to an Arms Dealer.\n Get a  Schedule for the fire arm balistics to taken by DCI',
-    state: false,
+    state: true,
 
+    ongoing: true,
+  },
+  {
+    name: 'Licence',
+    desc: 'Schedule For Picking Your Licence',
+    state: false,
     ongoing: false,
   },
   {
@@ -27,11 +28,11 @@ const products = [
 
     ongoing: false,
   },
+  
   {
-    name: 'Licence',
-    desc: 'Schedule For Picking Your Licence',
+    name: 'Profile',
+    desc: '',
     state: false,
-
     ongoing: false,
   },
 ];

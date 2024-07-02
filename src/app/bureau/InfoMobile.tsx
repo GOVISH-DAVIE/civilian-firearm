@@ -19,10 +19,12 @@ export default function InfoMobile({ totalPrice }: InfoProps) {
 
   const toggleDrawer = (newOpen: boolean) => () => {
     setOpen(newOpen);
-  };
+  }
 
   const DrawerList = (
-    <Box sx={(theme) => ({ width: 'auto', px: 3, pb: 3, pt: 8, background:theme.palette.mode =='dark'?theme.palette.primary.dark:theme.palette.primary.light+'10' })} role="presentation">
+    <Box sx={(theme) => ({ width: 'auto', px: 3, pb: 3, pt: 8, 
+    background:theme.palette.mode =='dark'?theme.palette.primary.dark:theme.palette.primary.light+'10'
+     })} role="presentation">
       <IconButton
         onClick={toggleDrawer(false)}
         sx={{ position: 'absolute', right: 8, top: 8 }}

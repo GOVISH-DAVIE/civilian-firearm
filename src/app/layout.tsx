@@ -23,11 +23,16 @@ export default function RootLayout({
     document.body.style.overflow = "auto";
     setIsMounted(true)
   }, [])
+  useEffect(() => {
+   if(  document.body.style.overflow = "hidden"){
+    document.body.style.overflow = "auto";
+   }
+  }, [  document.body.style.overflow ])
   const onRefChange = useCallback((node:any) => {
     if (node === null) { 
       // DOM node referenced by ref has been unmounted
     } else {
-      node.style.overflow = 'auto'
+      // node.style.overflow = 'auto'
       //  node.style.overflow = 'auto' 
     }
   }, []);

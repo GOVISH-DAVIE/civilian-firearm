@@ -22,7 +22,12 @@ export default function Review() {
     <Stack spacing={2}>
       <List disablePadding>
         <ListItem sx={{ py: 1, px: 0 }}>
-          <ListItemText primary="Document approval" secondary="approved by John Kimani" />
+          <ListItemText primary="Document approval" secondary="approved on 21-04-2024" />
+          <Typography color="text.secondary" gutterBottom>
+            Download Booklet <IconButton>
+              <CloudDownload color='primary' />
+            </IconButton>
+          </Typography>
         </ListItem>
 
 
@@ -38,14 +43,14 @@ export default function Review() {
           <Typography variant="subtitle2" gutterBottom>
             Fire arm
           </Typography>
-          <Typography gutterBottom>
+          {/* <Typography gutterBottom>
             Dealer 1
+          </Typography> */}
+          <Typography color="text.secondary" gutterBottom>
+            G4 - 100 rounds - 9mm
           </Typography>
           <Typography color="text.secondary" gutterBottom>
-            G4 100 9mm
-          </Typography>
-          <Typography color="text.secondary" gutterBottom>
-           Serial Number <b>12354-fvj</b>
+            Serial Number <b>12354-fvj</b>
           </Typography>
         </div>
 
@@ -56,11 +61,10 @@ export default function Review() {
           <Typography gutterBottom>
             Officer John Mutei
           </Typography>
-          <Typography color="text.secondary" gutterBottom>
-           Download balistic report <IconButton>
-            <CloudDownload color='primary' />
-           </IconButton>
+          <Typography variant='caption' gutterBottom>
+           Conducted On 01 - 05 - 2024
           </Typography>
+           
         </div>
         <div>
 
@@ -68,9 +72,9 @@ export default function Review() {
             Licence Download
           </Typography>
           <Typography color="text.secondary" gutterBottom>
-           Download License  <IconButton>
-            <CloudDownload color='primary' />
-           </IconButton>
+            Download License  <IconButton>
+              <CloudDownload color='primary' />
+            </IconButton>
           </Typography>
           <Grid container>
             {payments.map((payment) => (

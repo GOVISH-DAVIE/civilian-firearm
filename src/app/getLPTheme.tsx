@@ -366,20 +366,20 @@ export default function getLPTheme(mode: PaletteMode): ThemeOptions {
       MuiCard: {
         styleOverrides: {
           root: ({ theme, ownerState }) => ({
-            backgroundColor: gray[50],
+            // backgroundColor: gray[50],
             borderRadius: 10,
             border: `1px solid ${alpha(gray[200], 0.8)}`,
             boxShadow: 'none',
             transition: 'background-color, border, 80ms ease',
             ...(ownerState.variant === 'outlined' && {
-              background: `linear-gradient(to bottom, #FFF, ${gray[50]})`,
+              // background: `linear-gradient(to bottom, #FFF, ${gray[50]})`,
               '&:hover': {
                 borderColor: brand[300],
                 boxShadow: `0 0 24px ${brand[100]}`,
               },
             }),
             ...(theme.palette.mode === 'dark' && {
-              backgroundColor: alpha(gray[800], 0.6),
+              // backgroundColor: alpha(gray[800], 0.6),
               border: `1px solid ${alpha(gray[700], 0.3)}`,
               ...(ownerState.variant === 'outlined' && {
                 background: `linear-gradient(to bottom, ${gray[900]}, ${alpha(
@@ -388,7 +388,7 @@ export default function getLPTheme(mode: PaletteMode): ThemeOptions {
                 )})`,
                 '&:hover': {
                   borderColor: brand[700],
-                  boxShadow: `0 0 24px ${brand[800]}`,
+                  boxShadow: `0 0 10px ${brand[800]}`,
                 },
               }),
             }),

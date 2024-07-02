@@ -39,7 +39,8 @@ interface ToggleCustomThemeProps {
 }
 
 
-const steps = ['Document', 'Verification', 'Get Fire Arm', ' Balistics ', 'Final '];
+const steps = [ 'Get Fire Arm', ' Balistics ', 'Profile '];
+// const steps = ['Document', 'Verification', 'Get Fire Arm', ' Balistics ', 'Profile '];
 
 const logoStyle = {
   width: '140px',
@@ -50,15 +51,15 @@ const logoStyle = {
 
 function getStepContent(step: number) {
   switch (step) {
+    // case 0:
+    //   return <AddressForm />;
+    // case 1:
+    //   return <PaymentForm />;
     case 0:
-      return <AddressForm />;
-    case 1:
-      return <PaymentForm />;
-    case 2:
       return <Dealers />;
-    case 3:
+    case 1:
       return <Balistics />;
-    case 4:
+    case 2:
       return <Review />;
     default:
       throw new Error('Unknown step');

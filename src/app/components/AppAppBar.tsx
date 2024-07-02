@@ -122,7 +122,7 @@ function AppAppBar() {
 
                 <Link style={{
                   textDecoration: "none"
-                }} href={'/bereau'}>
+                }} href={'/bureau'}>
                   <MenuItem
                     href='/bureau'
                     sx={{ py: '6px', px: '12px' }}
@@ -199,9 +199,9 @@ function AppAppBar() {
                     </MenuItem> </Link>
                   <Link style={{
                     textDecoration: 'none'
-                  }} href='/beareau'>
-                    <MenuItem href='/home'>
-                      Beareau Home
+                  }} href='/bureau'>
+                    <MenuItem href='/bureau'>
+                      Bureau Home
                     </MenuItem> </Link>
 
 
