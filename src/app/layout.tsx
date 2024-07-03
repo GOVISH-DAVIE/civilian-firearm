@@ -8,6 +8,8 @@ import { ThemeMode } from "../context/theme";
 import Footer from "./home/components/Footer";
 import { useCallback, useEffect, useLayoutEffect, useState } from "react";
 import useThemeMode from "../hooks/themeMode";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 const inter = Inter({ subsets: ["latin"] });
 
 
@@ -67,6 +69,8 @@ export default function RootLayout({
 
 
       }} className={inter.className}>
+        <SpeedInsights/>
+        <Analytics/>
         <ThemeMode  >
 
 
