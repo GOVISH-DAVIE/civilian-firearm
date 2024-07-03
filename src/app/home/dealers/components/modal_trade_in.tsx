@@ -5,7 +5,10 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import { Grid, IconButton, TextField } from '@mui/material';
 import { Close, Send, ShoppingCartCheckout } from '@mui/icons-material';
- 
+import ClientDealerTabs from './tabs/dealer_client';
+
+
+
 export default function TradeInModal() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);

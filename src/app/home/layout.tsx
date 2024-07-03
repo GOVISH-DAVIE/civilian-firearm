@@ -1,5 +1,6 @@
 "use client"
-import React from "react"; 
+import React from "react";
+import AppAppBar from "./components/AppAppBar";
 import { Box } from "@mui/material";
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
@@ -21,10 +22,16 @@ import ArrowBackRoundedIcon from '@mui/icons-material/ArrowBackRounded';
 import AutoAwesomeRoundedIcon from '@mui/icons-material/AutoAwesomeRounded';
 import ChevronLeftRoundedIcon from '@mui/icons-material/ChevronLeftRounded';
 import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
-import Info from "@/components/home/Info";
-import AppAppBar from "@/components/home/components/AppAppBar";
 
- 
+import AddressForm from './AddressForm';
+// import getCheckoutTheme from './getCheckoutTheme';
+import Info from './Info';
+import InfoMobile from './InfoMobile';
+import PaymentForm from './PaymentForm';
+import Review from './Review';
+import ToggleColorMode from './ToggleColorMode';
+import Balistics from './balistics';
+import Dealers from './dealers';
 
 export default function HomeLayout({
     children,

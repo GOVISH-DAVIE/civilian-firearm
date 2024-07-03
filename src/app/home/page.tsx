@@ -23,15 +23,15 @@ import AutoAwesomeRoundedIcon from '@mui/icons-material/AutoAwesomeRounded';
 import ChevronLeftRoundedIcon from '@mui/icons-material/ChevronLeftRounded';
 import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
 
-import AddressForm from '../../components/home/AddressForm';
+import AddressForm from './AddressForm';
 // import getCheckoutTheme from './getCheckoutTheme';
-import Info from '../../components/home/Info';
-import InfoMobile from '../../components/home/InfoMobile';
-import PaymentForm from '../../components/home/PaymentForm';
-import Review from '../../components/home/Review';
-import ToggleColorMode from '../../components/home/ToggleColorMode';
-import Balistics from '../../components/home/balistics';
-import Dealers from '../../components/home/dealers';
+import Info from './Info';
+import InfoMobile from './InfoMobile';
+import PaymentForm from './PaymentForm';
+import Review from './Review';
+import ToggleColorMode from './ToggleColorMode';
+import Balistics from './balistics';
+import Dealers from './dealers';
 
 interface ToggleCustomThemeProps {
   showCustomTheme: Boolean;

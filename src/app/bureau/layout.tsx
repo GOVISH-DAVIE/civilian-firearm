@@ -1,6 +1,6 @@
 "use client"
 import React from "react";
-import AppAppBar from "../../components/home/components/AppAppBar";
+import AppAppBar from "../home/components/AppAppBar";
 import { Box, Button, Grid } from "@mui/material";
 import { ArrowBackRounded } from "@mui/icons-material";
 import Info from './Info';

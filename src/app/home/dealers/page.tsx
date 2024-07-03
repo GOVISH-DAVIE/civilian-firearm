@@ -1,9 +1,9 @@
 "use client"
 import { Box, Button, Card, CardContent, Divider, IconButton, InputAdornment, ListItem, ListItemText, TextField, Typography } from "@mui/material";
 import React from "react";
-import InfoMobile from "../../../components/home/InfoMobile";
+import InfoMobile from "../InfoMobile";
 import { Search } from "@mui/icons-material";
-import GetInTouchModal from "../../../components/dealers/components/modal";
+import GetInTouchModal from "./components/modal";
 
 export default function ClientDealer() {
     return <React.Fragment>

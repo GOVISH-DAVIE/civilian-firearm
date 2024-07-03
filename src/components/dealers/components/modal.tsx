@@ -5,9 +5,9 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import { Grid, IconButton } from '@mui/material';
 import { Close, ShoppingCartCheckout } from '@mui/icons-material';
-import ClientDealerTabs from './tabs/dealer_client';
-import TradeInModal from './modal_trade_in';
-
+import TradeInModal from '@/app/home/dealers/components/modal_trade_in';
+import ClientDealerTabs from '@/app/home/dealers/components/tabs/dealer_client';
+ 
 
 
 export default function GetInTouchModal() {

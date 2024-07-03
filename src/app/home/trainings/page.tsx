@@ -1,9 +1,9 @@
 "use client"
 import { Box, Button, Card, CardContent, Divider, Grid, IconButton, InputAdornment, ListItem, ListItemText, TextField, Typography } from "@mui/material";
 import React from "react";
-import InfoMobile from "@/components/home/InfoMobile";
+import InfoMobile from "@/app/home/InfoMobile";
 import { Search } from "@mui/icons-material"; 
-import ClientTraining from "@/components/training/components/traning_card";
+import ClientTraining from "@/app/home/trainings/components/traning_card";
 
 export default function Trrainings() {
     return <React.Fragment>
