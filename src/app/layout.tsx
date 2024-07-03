@@ -11,7 +11,7 @@ import useThemeMode from "./hooks/themeMode";
 const inter = Inter({ subsets: ["latin"] });
 
 
- 
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -24,18 +24,19 @@ export default function RootLayout({
     setIsMounted(true)
   }, [])
   useEffect(() => {
-   if(  document.body.style.overflow = "hidden"){
-    document.body.style.overflow = "auto";
-   }
-  }, [  document.body.style.overflow ])
-  const onRefChange = useCallback((node:any) => {
-    if (node === null) { 
+    if (document.body.style.overflow = "hidden") {
+      document.body.style.overflow = "auto";
+    }
+  }, [])
+  const onRefChange = useCallback((node: any) => {
+
+    if (node === null) {
       // DOM node referenced by ref has been unmounted
     } else {
       // node.style.overflow = 'auto'
-      //  node.style.overflow = 'auto' 
+      document.body.style.overflow = "auto"
     }
-  }, []);
+  }, [document.body]);
 
 
 
@@ -44,7 +45,7 @@ export default function RootLayout({
 
   }
 
-  
+
 
   return (
 

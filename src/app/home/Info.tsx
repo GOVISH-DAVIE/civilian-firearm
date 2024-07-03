@@ -36,16 +36,16 @@ const products = [
     name: 'Trainings',
     desc: 'Get Scheduled for Training',
     state: false,
-    to:'/home/dealers',
+    to:'/home/trainings',
 
     ongoing: false,
   },
   
   {
-    name: 'My Armoury',
+    name: 'My Armory',
     desc: '',
     state: false,
-    to:'/home/armoury',
+    to:'/home/armory',
     ongoing: false,
   },
 ];
