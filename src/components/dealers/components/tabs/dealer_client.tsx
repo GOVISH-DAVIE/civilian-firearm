@@ -3,9 +3,9 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import { MarkChatReadOutlined, MarkChatUnreadOutlined, Shop2Outlined, ShopTwo, Store, StoreOutlined } from '@mui/icons-material';
-import { Grid } from '@mui/material'; 
-import DealerProductCard from '../product_card';
-import RequestList from '../list/request_list';
+import { Grid } from '@mui/material';  
+import DealerProductCard from '@/app/home/dealers/components/product_card';
+import RequestList from '@/app/home/dealers/components/list/request_list';
 
 interface TabPanelProps {
   children?: React.ReactNode;
