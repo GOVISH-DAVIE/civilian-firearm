@@ -26,11 +26,10 @@ export default function RootLayout({
 
   useThemeMode()
   const [isMounted, setIsMounted] = useState<Boolean>(false);
-  
+
   useEffect(() => {
-    if (document.body.style.overflow = "hidden") {
-      document.body.style.overflow = "auto";
-    }
+    setIsMounted(true)
+   
   }, [])
   const onRefChange = useCallback((node: any) => {
 
@@ -40,13 +39,18 @@ export default function RootLayout({
       // node.style.overflow = 'auto'
       document.body.style.overflow = "auto"
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [document.body]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
 
 
   if (!isMounted) {
-    return null
+    return <html>
+
+      <body>
+
+      </body>
+    </html>
 
   }
 
