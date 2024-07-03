@@ -6,7 +6,7 @@ import { Box, CircularProgress, ToggleButton, ToggleButtonGroup } from "@mui/mat
 import AutoAwesomeRoundedIcon from '@mui/icons-material/AutoAwesomeRounded';
 import { ThemeMode } from "./context/theme";
 import Footer from "./components/Footer";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useState } from "react";
 import useThemeMode from "./hooks/themeMode";
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,12 +17,16 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  useLayoutEffect(() => {
+    if (typeof document !== 'undefined') {
+      document.body.style.overflow = "auto";
+    }
+  }, []);
+
+
   useThemeMode()
   const [isMounted, setIsMounted] = useState<Boolean>(false);
-  useEffect(() => {
-    document.body.style.overflow = "auto";
-    setIsMounted(true)
-  }, [])
+  
   useEffect(() => {
     if (document.body.style.overflow = "hidden") {
       document.body.style.overflow = "auto";
@@ -36,6 +40,7 @@ export default function RootLayout({
       // node.style.overflow = 'auto'
       document.body.style.overflow = "auto"
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [document.body]);
 
 
