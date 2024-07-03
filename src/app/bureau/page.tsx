@@ -23,7 +23,7 @@ import AutoAwesomeRoundedIcon from '@mui/icons-material/AutoAwesomeRounded';
 import ChevronLeftRoundedIcon from '@mui/icons-material/ChevronLeftRounded';
 import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
 
-import AddressForm from '../home/AddressForm';
+import AddressForm from '../../components/home/AddressForm';
 // import getCheckoutTheme from './getCheckoutTheme';
 import Info from './Info';
 import InfoMobile from './InfoMobile';
@@ -32,7 +32,7 @@ import Review from './Review';
 import ToggleColorMode from './ToggleColorMode';
 import Balistics from './balistics';
 import Dealers from './dealers';
-import DashCard from '../components/card/dashCard';
+import DashCard from '../../components/home/components/card/dashCard';
 import { Settings } from '@mui/icons-material';
 
 interface ToggleCustomThemeProps {

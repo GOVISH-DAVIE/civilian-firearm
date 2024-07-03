@@ -13,9 +13,9 @@ import Grid from '@mui/material/Grid';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { alpha, createTheme, ThemeProvider } from '@mui/material/styles';
-import useThemeMode from '../hooks/themeMode';
+import useThemeMode from '../../hooks/themeMode';
 import { Fab } from '@mui/material';
-import ToggleColorMode from '../components/ToggleColorMode';
+import ToggleColorMode from '../../components/home/components/ToggleColorMode';
 
 function Copyright(props: any) {
     return (

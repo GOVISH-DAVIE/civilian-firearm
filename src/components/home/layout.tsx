@@ -1,6 +1,6 @@
 "use client"
 import React from "react";
-import AppAppBar from "../components/AppAppBar";
+import AppAppBar from "./components/AppAppBar";
 import { Box } from "@mui/material";
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';

@@ -4,10 +4,10 @@ import { Inter } from "next/font/google";
 // import "./globals.css";
 import { Box, CircularProgress, ToggleButton, ToggleButtonGroup } from "@mui/material";
 import AutoAwesomeRoundedIcon from '@mui/icons-material/AutoAwesomeRounded';
-import { ThemeMode } from "./context/theme";
-import Footer from "./components/Footer";
+import { ThemeMode } from "../context/theme";
+import Footer from "../components/home/components/Footer";
 import { useCallback, useEffect, useLayoutEffect, useState } from "react";
-import useThemeMode from "./hooks/themeMode";
+import useThemeMode from "../hooks/themeMode";
 const inter = Inter({ subsets: ["latin"] });
 
 

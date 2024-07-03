@@ -7,17 +7,17 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import AutoAwesomeRoundedIcon from '@mui/icons-material/AutoAwesomeRounded';
-import AppAppBar from './components/AppAppBar';
-import Hero from './components/Hero';
-import LogoCollection from './components/LogoCollection';
-import Highlights from './components/Highlights';
-import Pricing from './components/Pricing';
-import Features from './components/Features';
-import Testimonials from './components/Testimonials';
-import FAQ from './components/FAQ';
-import Footer from './components/Footer';
+import AppAppBar from '../components/home/components/AppAppBar';
+import Hero from '../components/home/components/Hero';
+import LogoCollection from '../components/home/components/LogoCollection';
+import Highlights from '../components/home/components/Highlights';
+import Pricing from '../components/home/components/Pricing';
+import Features from '../components/home/components/Features';
+import Testimonials from '../components/home/components/Testimonials';
+import FAQ from '../components/home/components/FAQ';
+import Footer from '../components/home/components/Footer';
 import getLPTheme from './getLPTheme';
-import useThemeMode from './hooks/themeMode';
+import useThemeMode from '../hooks/themeMode';
 import { Cookies } from '@/app/utils/cookies';
 
  

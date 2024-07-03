@@ -14,7 +14,7 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Fab } from '@mui/material';
-import ToggleColorMode from '../components/ToggleColorMode';
+import ToggleColorMode from '../../components/home/components/ToggleColorMode';
 
 function Copyright(props: any) {
   return (

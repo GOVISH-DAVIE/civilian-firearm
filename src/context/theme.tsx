@@ -1,7 +1,7 @@
 "use client"
 import { createTheme, CssBaseline, PaletteMode, ThemeProvider } from "@mui/material";
 import React, { createContext, ReactNode, useEffect, useState } from "react";
-import getLPTheme from "../getLPTheme";
+import getLPTheme from "../app/getLPTheme";
 import { Cookies } from "@/app/utils/cookies";
 
 // const themeMode = createContext()
