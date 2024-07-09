@@ -119,6 +119,19 @@ function AppAppBar() {
                   </MenuItem>
 
                 </Link>
+                <Link style={{
+                  textDecoration: "none"
+                }} href={'/dealer'}>
+                  <MenuItem
+                    href='/dealer'
+                    sx={{ py: '6px', px: '12px' }}
+                  >
+                    <Typography variant="body2" color="text.primary">
+                      Dealer Home
+                    </Typography>
+                  </MenuItem>
+
+                </Link>
 
                 <Link style={{
                   textDecoration: "none"
@@ -196,6 +209,18 @@ function AppAppBar() {
                   }} href='/home'>
                     <MenuItem href='/home'>
                       Civilian Home
+                    </MenuItem> </Link>
+                  <Link style={{
+                    textDecoration: 'none'
+                  }} href='/dealer'>
+                    <MenuItem href='/dci'>
+                      Dealer Home
+                    </MenuItem> </Link>
+                  <Link style={{
+                    textDecoration: 'none'
+                  }} href='/dci'>
+                    <MenuItem href='/dci'>
+                      Dci Home
                     </MenuItem> </Link>
                   <Link style={{
                     textDecoration: 'none'

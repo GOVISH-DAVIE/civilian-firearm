@@ -35,7 +35,7 @@ export default function DashCard( {
   card
 }:{card:React.ReactNode}) {
   return (
-    <Box sx={{ minWidth: 275 }}>
+    <Box >
       <Card 
       sx={(theme)=>({
         backgroundColor:theme.palette.secondary[100]

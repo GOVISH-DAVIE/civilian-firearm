@@ -68,7 +68,16 @@ export default function Trrainings() {
             </ListItem>
             <Grid container >
 
-                <Grid item sm={6} md={4}>
+                <Grid item p={1} xs={6} md={4}>
+                    <ClientTraining />
+                </Grid>
+                <Grid item p={1}xs={6} md={4}>
+                    <ClientTraining />
+                </Grid>
+                <Grid item p={1} xs={6} md={4}>
+                    <ClientTraining />
+                </Grid>
+                <Grid item p={1} xs={6} md={4}>
                     <ClientTraining />
                 </Grid>
             </Grid>

@@ -209,6 +209,7 @@ export default function getLPTheme(mode: PaletteMode): ThemeOptions {
         },
         styleOverrides: {
           root: ({ theme }) => ({
+            
             padding: 8,
             overflow: 'clip',
             backgroundColor: '#fff',
