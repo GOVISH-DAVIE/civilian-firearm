@@ -13,21 +13,21 @@ const products = [
     desc: 'My stock',
     state: false,
     ongoing: true,
-    page: '/dealers/armoury'
+    page: '/dealer/armoury'
   },
   {
     name: 'Inquiries/Requests',
     desc: 'Inquires and Requests',
     state: false,
     ongoing: false,
-    page: '/dealers/inquiries'
+    page: '/dealer/inquiries'
   },
   {
     name: 'Customers',
     desc: 'IPRS/My clients',
     state: false,
     ongoing: false,
-    page: '/dealers/clients'
+    page: '/dealer/clients'
   },
   {
     name: 'Ranges',
@@ -35,7 +35,7 @@ const products = [
     state: false,
     ongoing: false,
 
-    page: '/dealers/ranges'
+    page: '/dealer/ranges'
   },
   {
     name: 'Profile',

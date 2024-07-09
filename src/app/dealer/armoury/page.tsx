@@ -3,18 +3,20 @@ import { MoreHoriz, MoreVert, MoreVertRounded } from "@mui/icons-material";
 import { Box, Button, Card, Chip, IconButton } from "@mui/material";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
 import PopperPopupState from "./components/poper";
+import MyArmourySettings from "./components/poper";
+import CreateDealerFireArm from "./components/new_fire_arm";
 
 const columns: GridColDef[] = [
     { field: 'id', headerName: 'ID', width: 70 },
     {
         field: 'fullName',
-        headerName: 'Full name',
+        headerName: 'Fire Arm Name',
         description: 'This column has a value getter and is not sortable.',
         sortable: false,
         width: 160,
         valueGetter: (value: any, row: { firstName: any; lastName: any; }) => `${row.firstName || ''} ${row.lastName || ''}`,
       },
-    { field: 'Status', headerName: 'Status ', width: 130,
+    { field: 'Status', headerName: 'Quantity ', width: 130,
     
     renderCell: (params: {row: { firstName: any; lastName: any; status:boolean }}) => 
         <Chip color={ params.row.status?"success":"error"} label={params.row.status?"Approved":"Rejected"} /> ,
@@ -22,9 +24,9 @@ const columns: GridColDef[] = [
      },
     {
       field: 'Finger Prints',
-      headerName: 'Finger Prints',
+      headerName: 'Stock Out Level',
       type: 'actions',
-      width: 90,
+      width: 200,
       renderCell: (params: {row: {address:string }}) => 
          <Button>Finger Prints</Button>
     },
@@ -34,7 +36,7 @@ const columns: GridColDef[] = [
       type: 'actions',
       width: 90,
       renderCell: (params: {row: {address:string }}) => 
-        <PopperPopupState />
+        <MyArmourySettings />
     },
     // {
     //   field: 'fullName',
@@ -63,7 +65,8 @@ export default function Applications(  ) {
       <Card sx={{
         p:2
       }} variant="elevation" >
-        hello
+         <CreateDealerFireArm />
+         <br /><br />
         <DataGrid
         rows={rows}
         columns={columns}

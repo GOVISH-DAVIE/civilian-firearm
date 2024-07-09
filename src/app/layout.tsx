@@ -10,7 +10,9 @@ import { useCallback, useEffect, useLayoutEffect, useState } from "react";
 import useThemeMode from "../hooks/themeMode";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
+import { QueryClient, QueryClientProvider } from "react-query";
 const inter = Inter({ subsets: ["latin"] });
+const queryClient = new QueryClient()
 
 
 
@@ -31,7 +33,7 @@ export default function RootLayout({
 
   useEffect(() => {
     setIsMounted(true)
-   
+
   }, [])
   const onRefChange = useCallback((node: any) => {
 
@@ -69,12 +71,15 @@ export default function RootLayout({
 
 
       }} className={inter.className}>
-        <SpeedInsights/>
-        <Analytics/>
+        <SpeedInsights />
+        <Analytics />
         <ThemeMode  >
+          <QueryClientProvider client={queryClient}>
 
 
-          {children}
+
+            {children}
+          </QueryClientProvider>
           <Footer />
 
 

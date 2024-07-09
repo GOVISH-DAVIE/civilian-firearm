@@ -6,6 +6,7 @@ import Modal from '@mui/material/Modal';
 import { Divider, Grid, IconButton, InputAdornment, TextField } from '@mui/material';
 import { AccountCircle, Add, AddLocation, Close, Domain, LocationCity, Mail, Password, Phone, ShoppingCartCheckout } from '@mui/icons-material';
 import { Container } from '@mui/system';
+import { useCreateDealer } from '../../domain/hooks/dealer_hook';
 
 
 
@@ -14,6 +15,7 @@ export default function CreateDealer() {
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
+    const { handleSubmit, state } = useCreateDealer(false)
 
     return (
         <div>
@@ -59,80 +61,82 @@ export default function CreateDealer() {
                     </Typography>
                     <Divider />
 
-                    <Container sx={{
-                        mt: 2
-                    }}>
-                        <TextField InputProps={{
-                            startAdornment: (
-                                <InputAdornment position="start">
-                                    <AccountCircle />
-                                </InputAdornment>
-                            ),
-                        }} fullWidth id="outlined-basic" label="Dealer Name" variant="outlined" />
-                        <TextField sx={{
-                            my: 1.5
-                        }}
-                            InputProps={{
+                    <form onSubmit={handleSubmit}>
+                        <Container sx={{
+                            mt: 2
+                        }}>
+                            <TextField InputProps={{
                                 startAdornment: (
                                     <InputAdornment position="start">
-                                        <Domain />
+                                        <AccountCircle />
                                     </InputAdornment>
                                 ),
+                            }} fullWidth id="outlined-basic" label="Dealer Name" variant="outlined" />
+                            <TextField sx={{
+                                my: 1.5
                             }}
-                            fullWidth id="outlined-basic" label="Dealer Business Name" variant="outlined" />
-                        <TextField sx={{
-                            my: 1.5
-                        }}
-                            InputProps={{
-                                startAdornment: (
-                                    <InputAdornment position="start">
-                                        <AddLocation />
-                                    </InputAdornment>
-                                ),
+                                InputProps={{
+                                    startAdornment: (
+                                        <InputAdornment position="start">
+                                            <Domain />
+                                        </InputAdornment>
+                                    ),
+                                }}
+                                fullWidth id="outlined-basic" label="Dealer Business Name" variant="outlined" />
+                            <TextField sx={{
+                                my: 1.5
                             }}
-                            fullWidth id="outlined-basic" label="Address" variant="outlined" />
-                        <TextField sx={{
-                            my: 1.5
-                        }}
-                            InputProps={{
-                                startAdornment: (
-                                    <InputAdornment position="start">
-                                        <Phone />
-                                    </InputAdornment>
-                                ),
+                                InputProps={{
+                                    startAdornment: (
+                                        <InputAdornment position="start">
+                                            <AddLocation />
+                                        </InputAdornment>
+                                    ),
+                                }}
+                                fullWidth id="outlined-basic" label="Address" variant="outlined" />
+                            <TextField sx={{
+                                my: 1.5
                             }}
-                            fullWidth id="outlined-basic" label="Phone Number" variant="outlined" />
-                        <TextField sx={{
-                            my: 1.5
-                        }}
-                            InputProps={{
-                                startAdornment: (
-                                    <InputAdornment position="start">
-                                        <Mail />
-                                    </InputAdornment>
-                                ),
+                                InputProps={{
+                                    startAdornment: (
+                                        <InputAdornment position="start">
+                                            <Phone />
+                                        </InputAdornment>
+                                    ),
+                                }}
+                                fullWidth id="outlined-basic" label="Phone Number" variant="outlined" />
+                            <TextField sx={{
+                                my: 1.5
                             }}
-                            fullWidth id="outlined-basic" label="Email " variant="outlined" />
-                        <TextField sx={{
-                            my: 1.5
-                        }}
-                            InputProps={{
-                                startAdornment: (
-                                    <InputAdornment position="start">
-                                        <Password />
-                                    </InputAdornment>
-                                ),
+                                InputProps={{
+                                    startAdornment: (
+                                        <InputAdornment position="start">
+                                            <Mail />
+                                        </InputAdornment>
+                                    ),
+                                }}
+                                fullWidth id="outlined-basic" label="Email " variant="outlined" />
+                            <TextField sx={{
+                                my: 1.5
                             }}
-                            fullWidth id="outlined-basic" label="One Time PassWord " variant="outlined" />
+                                InputProps={{
+                                    startAdornment: (
+                                        <InputAdornment position="start">
+                                            <Password />
+                                        </InputAdornment>
+                                    ),
+                                }}
+                                fullWidth id="outlined-basic" label="One Time PassWord " variant="outlined" />
 
 
-                        <Button endIcon={
-                            <Add />
-                        } variant='outlined'>
-                            Create Dealer
-                        </Button>
+                            <Button endIcon={
+                                <Add />
+                            } variant='outlined'>
+                                Create Dealer
+                            </Button>
 
-                    </Container>
+                        </Container>
+                    </form>
 
                     {/* <TradeInModal />
           <ClientDealerTabs /> */}
