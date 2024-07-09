@@ -1,7 +1,7 @@
 "use client"
 import { Box, Button, Card, CardContent, Divider, IconButton, ListItem, ListItemText, Typography } from "@mui/material"
 import React from "react"
-import InfoMobile from "../InfoMobile"
+import InfoMobile from "../../InfoMobile"
 import { Add, MoreVert } from "@mui/icons-material"
 import CreateDealer from "./component/new_dealer"
 import DealerSettings from "./component/popper/dealer_settings"
