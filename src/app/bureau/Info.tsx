@@ -66,7 +66,10 @@ export default function Info({ totalPrice }: InfoProps) {
         Civilian  Fire Arm Portal, Welcome
       </Typography>
       <Typography variant="h4" gutterBottom>
-        Martin K.
+        John M.
+      </Typography>
+      <Typography variant="h6" gutterBottom>
+        serviceNO. #12d71
       </Typography>
       <List disablePadding>
         {products.map((product) => (

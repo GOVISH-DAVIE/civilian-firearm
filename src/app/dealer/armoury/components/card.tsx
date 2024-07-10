@@ -16,6 +16,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { Button, Grid } from '@mui/material';
 import { Shop2Outlined, ShoppingCartCheckout } from '@mui/icons-material';
+import SellTo from './sell_to';
 
 interface ExpandMoreProps extends IconButtonProps {
   expand: boolean;
@@ -32,7 +33,7 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
   }),
 }));
 
-export default function DealerProductCard({ desc, image, name, qty }: {
+export default function DealerProductCardDealer({ desc, image, name, qty }: {
   name: string,
   desc: string,
   qty: number,
@@ -60,9 +61,7 @@ export default function DealerProductCard({ desc, image, name, qty }: {
         <Typography variant="body2" color="text.secondary">
           {desc}</Typography>
         <Grid container mt={1}>
-          {/* <Button variant='outlined' endIcon={<ShoppingCartCheckout />}>
-            Request Price
-          </Button> */}
+         <SellTo name={name} qty={qty} desc={desc} image={image} />
 
         </Grid>
       </CardContent>

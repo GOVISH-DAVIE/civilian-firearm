@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
-import { Divider, Grid, IconButton, InputAdornment, TextField } from '@mui/material';
+import { CircularProgress, Divider, Grid, IconButton, InputAdornment, TextField } from '@mui/material';
 import { AccountCircle, Add, AddLocation, Close, Domain, LocationCity, Mail, Password, Phone, ShoppingCartCheckout } from '@mui/icons-material';
 import { Container } from '@mui/system';
 import { useCreateDealer } from '../../domain/hooks/dealer_hook';
@@ -15,7 +15,7 @@ export default function CreateDealer() {
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
-    const { handleSubmit, state } = useCreateDealer(false)
+    const { handleSubmit, state, createMutation } = useCreateDealer(false)
 
     return (
         <div>
@@ -71,7 +71,7 @@ export default function CreateDealer() {
                                         <AccountCircle />
                                     </InputAdornment>
                                 ),
-                            }} fullWidth id="outlined-basic" label="Dealer Name" variant="outlined" />
+                            }} fullWidth id="outlined-basic" required name='dealer_name' label="Dealer Name" variant="outlined" />
                             <TextField sx={{
                                 my: 1.5
                             }}
@@ -82,7 +82,7 @@ export default function CreateDealer() {
                                         </InputAdornment>
                                     ),
                                 }}
-                                fullWidth id="outlined-basic" label="Dealer Business Name" variant="outlined" />
+                                fullWidth id="outlined-basic" required name='dealer_business_name' label="Dealer Business Name" variant="outlined" />
                             <TextField sx={{
                                 my: 1.5
                             }}
@@ -93,7 +93,7 @@ export default function CreateDealer() {
                                         </InputAdornment>
                                     ),
                                 }}
-                                fullWidth id="outlined-basic" label="Address" variant="outlined" />
+                                fullWidth id="outlined-basic" required name='address' label="Address" variant="outlined" />
                             <TextField sx={{
                                 my: 1.5
                             }}
@@ -104,7 +104,7 @@ export default function CreateDealer() {
                                         </InputAdornment>
                                     ),
                                 }}
-                                fullWidth id="outlined-basic" label="Phone Number" variant="outlined" />
+                                fullWidth id="outlined-basic" required name='phone_number' label="Phone Number" variant="outlined" />
                             <TextField sx={{
                                 my: 1.5
                             }}
@@ -115,7 +115,7 @@ export default function CreateDealer() {
                                         </InputAdornment>
                                     ),
                                 }}
-                                fullWidth id="outlined-basic" label="Email " variant="outlined" />
+                                fullWidth id="outlined-basic" required name='email' label="Email " variant="outlined" />
                             <TextField sx={{
                                 my: 1.5
                             }}
@@ -126,14 +126,16 @@ export default function CreateDealer() {
                                         </InputAdornment>
                                     ),
                                 }}
-                                fullWidth id="outlined-basic" label="One Time PassWord " variant="outlined" />
+                                fullWidth id="outlined-basic" required name='one_time_password' label="One Time PassWord " variant="outlined" />
 
 
-                            <Button endIcon={
-                                <Add />
-                            } variant='outlined'>
-                                Create Dealer
-                            </Button>
+                            {
+                                createMutation.isLoading ? <CircularProgress /> : <Button type='submit' endIcon={
+                                    <Add />
+                                } variant='outlined'>
+                                    Create Dealer
+                                </Button>
+                            }
 
                         </Container>
                     </form>

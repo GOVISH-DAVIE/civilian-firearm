@@ -10,7 +10,7 @@ import TradeInModal from './modal_trade_in';
 
 
 
-export default function GetInTouchModal() {
+export default function GetInTouchModal({ dealer }: { dealer: IDealer }) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -40,18 +40,18 @@ export default function GetInTouchModal() {
           bgcolor: 'background.paper',
           boxShadow: 24,
           p: 4,
-          overflow:'scroll'
+          overflow: 'scroll'
         })}>
           <Grid container justifyContent='end'>
-            <IconButton  onClick={handleClose} > <Close /></IconButton>
+            <IconButton onClick={handleClose} > <Close /></IconButton>
 
           </Grid>
           <Typography id="modal-modal-title" variant="h4" component="h2">
-            Dealer 1
+            {dealer.dealer_name}
           </Typography>
           <Typography variant='body1' id="modal-modal-description" sx={{ mt: 2 }}>
-            Location: Hurlingum TOD <br />
-            Phone: +254 79721xxxx<br />
+            Location: {dealer.address} <br />
+            Phone: {dealer.phone_number}<br />
 
           </Typography>
           <TradeInModal />

@@ -32,13 +32,16 @@ import Review from './Review';
 import ToggleColorMode from './ToggleColorMode';
 import Balistics from './balistics';
 import Dealers from './dealers';
+import { BeauralDealerProvider } from "../bureau/domain/context/dealerContext";
 
 export default function HomeLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;
 }>) {
-    return <React.Fragment>
+    return  <BeauralDealerProvider  >
+
+     <React.Fragment>
         <AppAppBar />
         <Grid container  >
             <Grid
@@ -117,4 +120,5 @@ export default function HomeLayout({
             </Grid>
         </Grid>
     </React.Fragment>
+    </BeauralDealerProvider>
 }

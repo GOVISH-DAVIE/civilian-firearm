@@ -32,12 +32,12 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
   }),
 }));
 
-export default function DealerProductCard({ desc, image, name, qty }: {
-  name: string,
-  desc: string,
-  qty: number,
-  image: string,
-}) {
+export default function DealerBeauralProductCard({desc,image,name,qty}:{
+    name: string,
+    desc: string,
+    qty: number,
+    image: string,
+  }) {
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
@@ -54,16 +54,14 @@ export default function DealerProductCard({ desc, image, name, qty }: {
         component="img"
         height="194"
         image={`/${image}`}
-        alt="G3"
+        alt="G3" 
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-          {desc}</Typography>
+        {desc}</Typography>
         <Grid container mt={1}>
-          {/* <Button variant='outlined' endIcon={<ShoppingCartCheckout />}>
-            Request Price
-          </Button> */}
-
+          
+          
         </Grid>
       </CardContent>
 

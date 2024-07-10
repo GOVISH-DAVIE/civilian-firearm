@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import { Grid, IconButton, TextField } from '@mui/material';
-import { Close, Send, ShoppingCartCheckout } from '@mui/icons-material';
+import { ChatBubble, Close, Send, ShoppingCartCheckout } from '@mui/icons-material';
 import ClientDealerTabs from './tabs/dealer_client';
 
 
@@ -16,7 +16,7 @@ export default function TradeInModal() {
 
   return (
     <div>
-      <Button sx={{ my: 1 }} onClick={handleOpen} variant='outlined' endIcon={<ShoppingCartCheckout />}>Request For Trade In</Button>
+      <Button sx={{ my: 1 }} onClick={handleOpen} variant='outlined' endIcon={<ChatBubble />}>Inquiry</Button>
       <Modal
         open={open}
         onClose={handleClose}

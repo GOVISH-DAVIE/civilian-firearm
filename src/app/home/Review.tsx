@@ -41,7 +41,7 @@ export default function Review() {
       >
         <div>
           <Typography variant="subtitle2" gutterBottom>
-            Fire arm
+            Firearm
           </Typography>
           {/* <Typography gutterBottom>
             Dealer 1

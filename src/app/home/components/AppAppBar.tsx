@@ -106,6 +106,18 @@ function AppAppBar() {
                 alt="logo of Civilian"
               />
               <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+              <Link style={{
+                  textDecoration: "none"
+                }} href={'/bureau'}>
+                  <MenuItem
+                    href='/bureau'
+                    sx={{ py: '6px', px: '12px' }}
+                  >
+                    <Typography variant="body2" color="text.primary">
+                      Bureau 
+                    </Typography>
+                  </MenuItem>
+                </Link>
                 <Link style={{
                   textDecoration: "none"
                 }} href={'/home'}>
@@ -114,7 +126,7 @@ function AppAppBar() {
                     sx={{ py: '6px', px: '12px' }}
                   >
                     <Typography variant="body2" color="text.primary">
-                      Civilian Home
+                    Licensee
                     </Typography>
                   </MenuItem>
 
@@ -127,7 +139,22 @@ function AppAppBar() {
                     sx={{ py: '6px', px: '12px' }}
                   >
                     <Typography variant="body2" color="text.primary">
-                      Dealer Home
+                      Dealer 
+                    </Typography>
+                  </MenuItem>
+
+                </Link>
+
+
+                <Link style={{
+                  textDecoration: "none"
+                }} href={'/'}>
+                  <MenuItem
+                    href='/'
+                    sx={{ py: '6px', px: '12px' }}
+                  >
+                    <Typography variant="body2" color="text.primary">
+                      Trainers 
                     </Typography>
                   </MenuItem>
 
@@ -135,16 +162,20 @@ function AppAppBar() {
 
                 <Link style={{
                   textDecoration: "none"
-                }} href={'/bureau'}>
+                }} href={'/'}>
                   <MenuItem
-                    href='/bureau'
+                    href='/'
                     sx={{ py: '6px', px: '12px' }}
                   >
                     <Typography variant="body2" color="text.primary">
-                      Bureau Home
+                      Ranges 
                     </Typography>
                   </MenuItem>
+
                 </Link>
+                
+
+                
 
               </Box>
             </Box>

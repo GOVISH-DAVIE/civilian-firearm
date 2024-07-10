@@ -1,11 +1,19 @@
 "use client"
 import { Box, Button, Card, CardContent, Divider, IconButton, InputAdornment, ListItem, ListItemText, TextField, Typography } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
 import InfoMobile from "../InfoMobile";
 import { Search } from "@mui/icons-material";
 import GetInTouchModal from "./components/modal";
+import { useCreateDealer } from "@/app/bureau/domain/hooks/dealer_hook";
 
 export default function ClientDealer() {
+
+    const { getDealers, dealers, beauralDealer } = useCreateDealer(false)
+    useEffect(() => {
+        return () => {
+            getDealers.mutateAsync()
+        };
+    }, [])
     return <React.Fragment>
         <Card
             sx={{
@@ -59,55 +67,49 @@ export default function ClientDealer() {
                                 You can visit the following dealers to buy a fire arm</Typography>
                         </React.Fragment>
                     }
-                /> 
+                />
             </ListItem>
             <Divider />
-            <ListItem alignItems="flex-start">
+            {
+                beauralDealer.value.reverse().map((dealer, index) => {
+                    return dealer.dealer_name == '' ? <></> : <ListItem key={index} alignItems="flex-start">
 
-                <ListItemText
-                    primary="Dealer 1"
-                    secondary={
-                        <React.Fragment>
-                            <Typography
-                                sx={{ display: 'inline' }}
-                                component="span"
-                                variant="body2"
-                                color="text.primary"
-                            >
-                                Hurlingum <br />
-                                Kaffee Bld. 2nd floor
-
-                            </Typography>
-                        </React.Fragment>
-                    }
-                />
-
-                <GetInTouchModal />
-            </ListItem>
-            <ListItem alignItems="flex-start">
-
-                <ListItemText
-                    primary="Dealer 2"
-                    secondary={
-                        <React.Fragment>
-                            <Typography
-                                sx={{ display: 'inline' }}
-                                component="span"
-                                variant="body2"
-                                color="text.primary"
-                            >
-                                Hurlingum <br />
-                                Kaffee Bld. 2nd floor
+                        <ListItemText
+                            primary={`${dealer.dealer_name} \n `}
+                            secondary={
+                                <React.Fragment>
+                                    <Typography
+                                        sx={{ display: 'inline' }}
+                                        component="span"
+                                        variant="body2"
+                                        color="text.primary"
+                                    >
+                                        {
+                                            dealer.dealer_business_name
+                                        }
+                                        <br />
+                                        {
+                                            dealer.email
+                                        }
+                                        <br />
+                                        {
+                                            dealer.address
+                                        }
 
 
-                            </Typography>
-                        </React.Fragment>
-                    }
-                />
+                                    </Typography>
+                                </React.Fragment>
+                            }
+                        />
 
-                <GetInTouchModal />
-            </ListItem>
+                        <GetInTouchModal dealer={dealer} />
+                    </ListItem>
+                })
+            }
         </Box>
 
     </React.Fragment>
 }
+
+
+{/* <GetInTouchModal /> */ }

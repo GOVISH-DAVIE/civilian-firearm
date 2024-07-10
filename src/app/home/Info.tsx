@@ -33,8 +33,24 @@ const products = [
     to:'/home/dealers'
   },
   {
-    name: 'Trainings',
-    desc: 'Get Scheduled for Training',
+    name: 'Ranges',
+    desc: 'List of Available Ranges',
+    state: false,
+    to:'/home/trainings',
+
+    ongoing: false,
+  },
+  {
+    name: 'Trainers',
+    desc: 'List of Available Trainers',
+    state: false,
+    to:'/home/trainings',
+
+    ongoing: false,
+  },
+  {
+    name: 'Workshops',
+    desc: 'Get Scheduled for Trainings',
     state: false,
     to:'/home/trainings',
 
