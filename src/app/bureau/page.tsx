@@ -99,7 +99,7 @@ export default function Beareau() {
                 New Applications
               </Typography>
               <Typography variant="h5" component="div">
-                20
+                20s
               </Typography>
 
             </CardContent>
@@ -107,7 +107,7 @@ export default function Beareau() {
 
               <Button startIcon={
                 <Settings />
-              } href='/applications' size="small">Manage</Button>
+              } href='/bureau/applications' size="small">Manage</Button>
               {/* <Button size="small">Create</Button> */}
               {/* <Button size="small">Manage</Button> */}
 
@@ -139,7 +139,7 @@ export default function Beareau() {
 
               <Button startIcon={
                 <Settings />
-              } href='/applications' size="small">Manage</Button>
+              } href='/bureau/officers' size="small">Manage</Button>
               {/* <Button size="small">Create</Button> */}
               {/* <Button size="small">Manage</Button> */}
 
@@ -171,7 +171,7 @@ export default function Beareau() {
 
               <Button startIcon={
                 <Settings />
-              } href='/applications' size="small">Manage</Button>
+              } href='/bureau/dci' size="small">Manage</Button>
               {/* <Button size="small">Create</Button> */}
               {/* <Button size="small">Manage</Button> */}
 
@@ -238,7 +238,7 @@ export default function Beareau() {
 
               <Button startIcon={
                 <Settings />
-              } href='/applications' size="small">Manage</Button>
+              } href='/bureau/applications' size="small">Manage</Button>
               {/* <Button size="small">Create</Button> */}
               {/* <Button size="small">Manage</Button> */}
 

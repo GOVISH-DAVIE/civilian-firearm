@@ -33,7 +33,9 @@ import ToggleColorMode from './ToggleColorMode';
 import Balistics from './balistics';
 import Dealers from './dealers';
 import DashCard from '../home/components/card/dashCard';
-import { Settings } from '@mui/icons-material';
+import { Add, Settings } from '@mui/icons-material';
+import ArcDesign from '../bureau/dealers/component/charts';
+import { Gauge } from '@mui/x-charts/Gauge';
 
 interface ToggleCustomThemeProps {
   showCustomTheme: Boolean;
@@ -95,19 +97,18 @@ export default function Beareau() {
         <DashCard card={(
           <React.Fragment>
             <CardContent>
-              <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                New Applications
-              </Typography>
-              <Typography variant="h5" component="div">
-                20
-              </Typography>
+
+              <ArcDesign />
 
             </CardContent>
             <CardActions>
+              <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+                New number of trainings attended
+              </Typography>
 
-              <Button startIcon={
+              {/* <Button startIcon={
                 <Settings />
-              } href='/applications' size="small">Manage</Button>
+              } href='/applications' size="small">Manage</Button> */}
               {/* <Button size="small">Create</Button> */}
               {/* <Button size="small">Manage</Button> */}
 
@@ -127,19 +128,20 @@ export default function Beareau() {
         <DashCard card={(
           <React.Fragment>
             <CardContent>
-              <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-               Bureau Officers
-              </Typography>
-              <Typography variant="h5" component="div">
-                20
-              </Typography>
+          
+
+              <Gauge width={200} height={200} value={60} startAngle={-90} endAngle={90} />
 
             </CardContent>
             <CardActions>
 
-              <Button startIcon={
+            <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+            New number of hrs of workshop attended
+              </Typography>
+
+              {/* <Button startIcon={
                 <Settings />
-              } href='/applications' size="small">Manage</Button>
+              } href='/applications' size="small">Manage</Button> */}
               {/* <Button size="small">Create</Button> */}
               {/* <Button size="small">Manage</Button> */}
 
@@ -149,70 +151,7 @@ export default function Beareau() {
 
 
       </Grid>
-
-      <Grid
-        item
-        p={1}
-        sm={12}
-        md={3}
-        lg={3}>
-        <DashCard card={(
-          <React.Fragment>
-            <CardContent>
-              <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-               DCI Officers
-              </Typography>
-              <Typography variant="h5" component="div">
-                20
-              </Typography>
-
-            </CardContent>
-            <CardActions>
-
-              <Button startIcon={
-                <Settings />
-              } href='/applications' size="small">Manage</Button>
-              {/* <Button size="small">Create</Button> */}
-              {/* <Button size="small">Manage</Button> */}
-
-            </CardActions>
-          </React.Fragment>
-        )} />
-
-
-      </Grid>
-
-      <Grid
-        item
-        p={1}
-        sm={12}
-        md={3}
-        lg={3}>
-        <DashCard card={(
-          <React.Fragment>
-            <CardContent>
-              <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-               Dealers 
-              </Typography>
-              <Typography variant="h5" component="div">
-                20
-              </Typography>
-
-            </CardContent>
-            <CardActions>
-
-              <Button startIcon={
-                <Settings />
-              } href='/bureau/dealers' size="small">Manage</Button>
-              {/* <Button size="small">Create</Button> */}
-              {/* <Button size="small">Manage</Button> */}
-
-            </CardActions>
-          </React.Fragment>
-        )} />
-
-
-      </Grid>
+ 
 
 
 
@@ -227,18 +166,18 @@ export default function Beareau() {
           <React.Fragment>
             <CardContent>
               <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-               Dealer Requests
+                Add Armoury
               </Typography>
-              <Typography variant="h5" component="div">
+              {/* <Typography variant="h5" component="div">
                 20
-              </Typography>
+              </Typography> */}
 
             </CardContent>
             <CardActions>
 
               <Button startIcon={
-                <Settings />
-              } href='/applications' size="small">Manage</Button>
+                <Add />
+              } href='/applications' size="small">Add Inventory</Button>
               {/* <Button size="small">Create</Button> */}
               {/* <Button size="small">Manage</Button> */}
 
@@ -248,10 +187,14 @@ export default function Beareau() {
 
 
       </Grid>
+       
 
-
-
+       
       
+
+
+
+
     </Grid>
   );
 }

@@ -64,12 +64,7 @@ export default function Hero() {
             color="text.secondary"
             sx={{ alignSelf: 'center', width: { sm: '100%', md: '80%' } }}
           >
-           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </Typography>
+        Civilian firearms are weapons owned by private individuals for purposes such as self-defense, hunting, sport shooting, and collecting. These firearms include handguns, rifles, and shotguns, and their ownership is regulated by laws varying significantly across countries and states. Advocates argue that civilian firearm ownership enhances personal security and individual freedom. However, critics highlight the risks, citing concerns about accidents, crime, and gun violence. The debate over civilian firearms encompasses constitutional rights, public safety, and cultural values, making it a complex and contentious issue in many societies.  </Typography>
           <Stack
             direction={{ xs: 'column', sm: 'row' }}
             alignSelf="center"

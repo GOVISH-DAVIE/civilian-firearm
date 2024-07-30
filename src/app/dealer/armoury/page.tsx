@@ -1,6 +1,6 @@
 'use client'
-import { MoreHoriz, MoreVert, MoreVertRounded } from "@mui/icons-material";
-import { Box, Button, Card, Chip, Grid, IconButton } from "@mui/material";
+import { Add, Inventory, MoreHoriz, MoreVert, MoreVertRounded, Work } from "@mui/icons-material";
+import { Avatar, Box, Button, Card, Chip, Grid, IconButton, ListItem, ListItemAvatar, ListItemText } from "@mui/material";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
 import PopperPopupState from "./components/poper";
 import MyArmourySettings from "./components/poper";
@@ -48,6 +48,30 @@ const columns: GridColDef[] = [
 export default function Applications() {
   return (
     <Grid container >
+    <Grid item sm={12} >
+      <Card sx={{
+        py:2,
+        my:2,
+      }}>
+      <ListItem>
+        <ListItemAvatar>
+          <Avatar>
+            <Inventory />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText primary="Add Inventory" secondary="" />
+        <Button variant="outlined" endIcon={
+          <Add />
+        } >
+          ADD
+
+
+        </Button>
+      </ListItem>
+      </Card>
+      </Grid>
+
+
 
       {[
         {
