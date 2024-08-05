@@ -52,15 +52,11 @@ import DraftsIcon from '@mui/icons-material/Drafts';
       <nav aria-label="secondary mailbox folders">
         <List>
           <ListItem disablePadding>
-            <ListItemButton>
-              <ListItemText primary="Delete" />
+            <ListItemButton color='red'>
+              <ListItemText color='red' primary="Delete" />
             </ListItemButton>
           </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton component="a" href="#simple-list">
-              <ListItemText primary="Schedule" />
-            </ListItemButton>
-          </ListItem>
+          
         </List>
       </nav>
     </Box>

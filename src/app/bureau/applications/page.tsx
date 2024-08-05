@@ -26,7 +26,7 @@ const columns: GridColDef[] = [
     field: 'Finger Prints',
     headerName: 'Finger Prints',
     type: 'actions',
-    width: 90,
+    width: 200,
     renderCell: (params: { row: { address: string } }) =>
       <Button>Finger Prints</Button>
   },
@@ -34,7 +34,7 @@ const columns: GridColDef[] = [
     field: 'Action',
     headerName: 'Action',
     type: 'actions',
-    width: 90,
+    width: 200,
     renderCell: (params: { row: { address: string } }) =>
       <PopperPopupState />
   },

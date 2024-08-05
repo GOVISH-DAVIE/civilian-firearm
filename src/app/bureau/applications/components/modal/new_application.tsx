@@ -132,8 +132,10 @@ export default function CreateApplication() {
 
 
                             <Grid container display={"flex"} flexDirection={"row"} alignItems={"center"}>
-                                <input ref={FileRef}  type='file'/>
-                                <Card sx={{
+                                <input hidden ref={FileRef} type='file' />
+                                <Card onClick={() => {
+                                    FileRef.current?.click()
+                                }} sx={{
                                     width: "70px",
                                     height: "70px",
                                     display: "flex",
@@ -141,7 +143,7 @@ export default function CreateApplication() {
                                     alignItems: 'center',
                                     justifyContent: "center",
                                     my: 2, mr: 1,
-                                    cursor:"pointer"
+                                    cursor: "pointer"
 
                                 }}>
                                     <Article fontSize={'large'} />
