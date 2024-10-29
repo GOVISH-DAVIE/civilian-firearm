@@ -99,7 +99,7 @@ export default function Beareau() {
                 New Applications
               </Typography>
               <Typography variant="h5" component="div">
-                20s
+                20
               </Typography>
 
             </CardContent>

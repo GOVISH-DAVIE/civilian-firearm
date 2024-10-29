@@ -44,15 +44,9 @@ const products = [
 
     ongoing: false,
 
-    page: '/bureau/lpo'
+    page: '#'
   },
-  {
-    name: 'Licence',
-    desc: 'Manage and issue fire arm Licence',
-    state: false,
-    ongoing: false,
-    page: '/bureau/license'
-  },
+
 ];
 
 interface InfoProps {

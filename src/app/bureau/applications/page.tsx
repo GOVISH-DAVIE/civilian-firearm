@@ -49,15 +49,15 @@ const columns: GridColDef[] = [
 ];
 
 const rows = [
-  { id: 1, status: true, lastName: 'Snow', firstName: 'Jon', age: 35 },
-  { id: 2, status: true, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
-  { id: 3, status: false, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
-  { id: 4, status: true, lastName: 'Stark', firstName: 'Arya', age: 16 },
-  { id: 5, status: false, lastName: 'Targaryen', firstName: 'Daenerys', age: null },
-  { id: 6, status: true, lastName: 'Melisandre', firstName: null, age: 150 },
-  { id: 7, status: false, lastName: 'Clifford', firstName: 'Ferrara', age: 44 },
-  { id: 8, status: true, lastName: 'Frances', firstName: 'Rossini', age: 36 },
-  { id: 9, status: false, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
+  { id: 1, status: true, lastName: 'Martin', firstName: 'Ndegwa', age: 35 },
+  { id: 2, status: true, lastName: 'Jane', firstName: 'Kiprotich', age: 42 },
+  { id: 3, status: true, lastName: 'Kimandu', firstName: 'Mutai', age: 45 },
+  { id: 4, status: true, lastName: 'Mary', firstName: 'Jane', age: 16 },
+  { id: 5, status: true, lastName: 'David', firstName: 'Kyenze', age: null },
+  { id: 6, status: true, lastName: 'Pyil', firstName: "Moses", age: 150 },
+  { id: 7, status: true, lastName: 'Clifford', firstName: 'Murera', age: 44 },
+  { id: 8, status: true, lastName: 'Frances', firstName: 'Wanjiru', age: 36 },
+  { id: 9, status: true, lastName: 'Roxie', firstName: 'Rose', age: 65 },
 ];
 
 export default function Applications() {

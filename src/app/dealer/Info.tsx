@@ -24,13 +24,7 @@ const products = [
     ongoing: false,
     page: '/dealer/inquiries'
   },
-  {
-    name: 'Customers',
-    desc: 'IPRS/My clients',
-    state: false,
-    ongoing: false,
-    page: '/dealer/clients'
-  },
+  
   {
     name: 'Ranges',
     desc: 'Licenced Ranges',
@@ -46,7 +40,7 @@ const products = [
 
     ongoing: false,
 
-    page: '/dealer/profile'
+    page: '#'
   },
 
 ];

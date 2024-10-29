@@ -50,7 +50,7 @@ const DealersPages = () => {
         <ListItem alignItems="flex-start">
 
             <ListItemText
-                primary="Officer 12 "
+                primary="Quinto M. "
                 secondary={
                     <React.Fragment>
                         <Typography
@@ -59,13 +59,86 @@ const DealersPages = () => {
                             variant="body2"
                             color="text.primary"
                         >
-                            Dci Main Office<br /> 
+                            Bureau Main Office<br /> 
 
 
                         </Typography>
                     </React.Fragment>
                 }
             />
+           
+
+            <DealerSettings />
+        </ListItem>
+        <ListItem alignItems="flex-start">
+
+            <ListItemText
+                primary="Frances Wanjiru "
+                secondary={
+                    <React.Fragment>
+                        <Typography
+                            sx={{ display: 'inline' }}
+                            component="span"
+                            variant="body2"
+                            color="text.primary"
+                        >
+                            Bureau Main Office<br /> 
+
+
+                        </Typography>
+                    </React.Fragment>
+                }
+            />
+         
+
+            <DealerSettings />
+        </ListItem>
+        <ListItem alignItems="flex-start">
+
+            <ListItemText
+                primary="Jane Kiprotich "
+                secondary={
+                    <React.Fragment>
+                        <Typography
+                            sx={{ display: 'inline' }}
+                            component="span"
+                            variant="body2"
+                            color="text.primary"
+                        >
+                            Bureau Main Office<br /> 
+
+
+                        </Typography>
+                    </React.Fragment>
+                }
+            />
+           
+
+            <DealerSettings />
+        </ListItem>
+
+
+
+        <ListItem alignItems="flex-start">
+
+            <ListItemText
+                primary="Kimani Wallece "
+                secondary={
+                    <React.Fragment>
+                        <Typography
+                            sx={{ display: 'inline' }}
+                            component="span"
+                            variant="body2"
+                            color="text.primary"
+                        >
+                            Bureau Main Office<br /> 
+
+
+                        </Typography>
+                    </React.Fragment>
+                }
+            />
+           
 
             <DealerSettings />
         </ListItem>

@@ -148,9 +148,9 @@ function AppAppBar() {
 
                 <Link style={{
                   textDecoration: "none"
-                }} href={'/'}>
+                }} href={'#'}>
                   <MenuItem
-                    href='/'
+                    href='#'
                     sx={{ py: '6px', px: '12px' }}
                   >
                     <Typography variant="body2" color="text.primary">
@@ -162,9 +162,9 @@ function AppAppBar() {
 
                 <Link style={{
                   textDecoration: "none"
-                }} href={'/'}>
+                }} href={'#'}>
                   <MenuItem
-                    href='/'
+                    href='@'
                     sx={{ py: '6px', px: '12px' }}
                   >
                     <Typography variant="body2" color="text.primary">

@@ -17,14 +17,7 @@ const products = [
     to:'/home',
     ongoing: true,
   },
-  {
-    name: 'Licences',
-    desc: 'Schedule For Picking Your Licence',
-    state: false,
-    ongoing: false,
 
-    to:'/home/dealers'
-  },
   {
     name: 'Dealers',
     desc: 'Resale/ Buy new Fire Arm',
